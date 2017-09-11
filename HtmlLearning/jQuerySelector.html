@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".three").dblclick(function () {
+                $("ul li:first").hide();
+            });
+            $("#hide").click(function () {
+                $("p").hide(1000);
+
+
+            });
+            $("#show").click(function () {
+                $("p , ul li:first").show();
+
+            });
+            $(".four").click(function () {
+                $("p:odd , article#h1").css({ "background-color": "gray", "color": "white" });
+                /* $("p:odd , article#h1").css("color","white");*/
+            });
+            $("input").focus(function () {
+                $(".name").next("span").css("display", "inline").fadeOut(1000);
+
+            });
+            $("input").blur(function () {
+                alert("handle for .blur() called.");
+            });
+            $(".five").mouseenter(function () {
+                alert("you entered on mouse!");
+            });
+
+
+
+        });
+                  /*$("#one").click(function (e) {
+                e.preventDefault();
+                $("p").hide();
+                $(".shadi").click(function () {
+                    $("p").show();
+                });
+            });*/
+    </script>
+    <style>
+        body {
+            height: 200%
+        }
+
+        span {
+            display: none;
+        }
+
+        .btn-group .button {
+            background-color: black;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 150px;
+            margin: 2px 2px;
+        }
+
+        .btn-group .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        div.container {
+            width: 92%;
+            border: 2px solid gray;
+            height: 200%;
+            padding: 3em;
+        }
+
+        header,
+        footer {
+            padding: 2em;
+            color: white;
+            background-color: black;
+            clear: left;
+            text-align: center;
+        }
+
+        article {
+
+            margin: 0 auto;
+            padding: 3em;
+            width: 70%
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <header>
+            <h1>jQuery Selectors</h1>
+        </header>
+        <div class="btn-group">
+
+            <button class="button" id="hide">hide</button>
+            <button class="button" id="show">show</button>
+            <button class="button three">dblclick</button>
+            <button class="button four">hilight</button>
+            <button class="button five">mouse</button>
+
+
+        </div>
+
+        <article>
+            <h1>Selectors</h1>
+            <p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
+            <p>jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes,
+                values of attributes and much more.</p>
+            <p>
+                <ul>
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
+                </ul>
+            </p>
+
+        </article>
+
+        <hr>
+        <article>
+            <h1>focus and blur</h1>
+            name: <input type="text" name="fullname" class="name"><span>focus fire</span><br>
+
+        </article>
+        <br>
+        <br>
+        <footer>Copyright &copy; W3Schools.com</footer>
+
+    </div>
+
+</body>
+
+</html>
