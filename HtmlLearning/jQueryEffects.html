@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button:first").click(function () {
+        $("#two").fadeToggle();
+        $("#three").fadeToggle("slow");
+
+      });
+      $("#flip").click(function () {
+        $("#panel , #allbuttons").slideToggle("slow");
+      });
+      $("#three").click(function () {
+        $("#footer").animate({
+          width: ["toggle", "swing"],
+          height: ["toggle", "swing"],
+          opacity: "toggle"
+        }, 2000, function () {
+
+        });
+
+
+      });
+      $("#two").click(function () {
+        $("#panel").slideUp(2000).slideDown(2000);
+      });
+
+
+
+    });
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .btn-group .button {
+      background-color: #ffc305;
+      border: 2px solid white;
+      color: black;
+      border-radius: 10px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      width: 150px;
+
+      clear: both;
+      left: 50px;
+
+      margin: 0 auto;
+    }
+
+    .btn-group .button:hover {
+      background-color: ;
+      transform: scale(1.5);
+    }
+
+    .header {
+      background-color: #34495e;
+      padding: 10px;
+
+      color: white;
+    }
+
+
+    .footer {
+      background-color: #34495e;
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+
+
+
+
+
+
+    main {
+      background: white;
+
+      padding: 100px;
+      width: 100%;
+      height: 80%;
+      left: 200px;
+      border-radius: 10px;
+    }
+
+    main div {
+      background: white;
+      color: black;
+      padding: 45px;
+      width: 200px;
+      height: 150px;
+      margin: 5px 6px;
+      text-align: center;
+      font-size: 200%;
+      border-radius: 80px;
+      border: none;
+      position: relative;
+    }
+
+    main div::before {
+      content: attr(content);
+
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      border-radius: 50%;
+
+
+      border-radius: 80px;
+      background: #c70039;
+      color: white;
+      position: absolute;
+      transform: scale(0);
+
+      transition: .5s ease-in-out;
+    }
+
+    main div:hover::before {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 59px;
+      height: 26px;
+      padding: 60px;
+
+
+
+      display: block;
+      text-align: center;
+
+      transform: scale(1);
+    }
+
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #ffc305;
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 2px 0;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #ffc305 transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div style="width:30%; height:50%;display:inline-block;">
+
+
+      <a class="fa fa-home" aria-hidden="true" style="font-size:250%; color:white;" href="index.html"></a>
+
+    </div>
+    <div style="width:40%; height:60%; display:inline-block;text-align:center;">
+      <h1 class="tooltip" id="flip">jQuery Effects
+        <span class="tooltiptext" style="font-size:60%">Click on me</span>
+        <h1>
+    </div>
+  </div>
+
+
+
+
+  <main class="flex-center" id="panel">
+
+    <div content=" Thank" color-content="yellow" id="a" style="border: 2px solid #581845;">
+
+      A
+
+    </div>
+
+
+
+
+    <div content="you" style="border: 2px solid #900c3f;">
+      Way
+    </div>
+    <div content="for" style=" border: 2px solid #c70039; ">
+      To
+    </div>
+    <div content="seeing" style="border: 2px solid #ff5733 ;">
+      Create
+    </div>
+    <div content="my" style="border: 2px solid #ffc305 ;">
+      Visual
+    </div>
+    <div content="page" style="border: 2px solid #e4dbaf ;">
+      Effects
+    </div>
+
+
+
+
+  </main>
+
+
+  <center>
+    <div class="btn-group " id="allbuttons">
+      <i class="fa fa-hand-o-right" aria-hidden="true" style="inline"></i>
+      <button class="button" id="one">Toggle</button>
+      <button class="button" id="two">Slide</button>
+      <button class="button" id="three">Animate</button>
+
+    </div>
+
+
+  </center>
+
+
+
+
+  <div class="footer" id="footer">
+    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    <h2 style="display:inline; font-family:arial; font-size:100%;">Shadi.Nourriz@gmail.com</h2>
+  </div>
+</body>
+
+</html>
