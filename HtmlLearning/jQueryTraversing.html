@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#one").click(function () {
+                alert("Text: " + $("#header").text());
+            });
+            $("#two").click(function () {
+                $("#p4").text(function (i, origText) {
+                    return "new text: " + origText;
+                });
+            });
+
+            $("#three").click(function () {
+                $("#p4").prepend("<b>Prepended text</b>. ").css("color", "red");
+                $("#p2").before("<i>before</i>");
+            });
+
+            $("#four").click(function () {
+                $(".button").remove(".one, .two, .three, .four");
+            });
+
+            $("#five").click(function () {
+                $("#p3 ,#p2").toggleClass("red");
+            });
+
+            $("#six").click(function () {
+                var txt = "";
+                txt += "Document width/height: " + $(document).width();
+                txt += "x" + $(document).height() + "\n";
+                txt += "Window width/height: " + $(window).width();
+                txt += "x" + $(window).height();
+                alert(txt);
+            });
+
+
+
+
+            $(".one").click(function () {
+                $("#header").closest("h1").css("background-color", "red");
+            });
+
+            $(".two").click(function () {
+                $("#test").parentsUntil("#divv3").css({ "color": "red", "border": "2px solid red" });
+            });
+            $(".three").click(function () {
+                $("#divv").find("#p3").css({ "color": "red", "border": "2px solid red" });
+                $("#divv2").children().css({ "color": "red", "border": "2px solid red" });
+
+            });
+            var $curr = $(".three");
+            $(".four").click(function () {
+                $("#three").siblings(".button").css({ "color": "red", "border": "2px solid red" });
+                $("#p3").next().css({ "color": "red", "border": "2px solid red" });
+                $curr = $curr.prev();
+                $("#divv3").css("background", "");
+                $curr.css("background", "black");
+
+            });
+
+            $(".five").click(function () {
+                $("#divv3").find("button").eq(2).addClass("red");
+                $("p").not("#p5, #p1 ,#p2").css("background-color", "red");
+                $(".button").filter("#two").css("background-color", "red");
+            });
+
+            $('.six').click(function () {
+
+                location.reload();
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0 auto;
+            width: 98%;
+            height: 100%;
+            border: #eee 2px solid;
+        }
+
+        a,
+        code {
+            color: white
+        }
+
+        p {
+            margin-bottom: 60px
+        }
+
+
+        pre {
+            float: right;
+            height: 400px;
+            width: 400px;
+            background-color: #ff5722;
+            margin: 0 50px 50px 0;
+            white-space: normal;
+            position: relative;
+            animation: shake 2s infinite;
+            animation-direction: alternate;
+        }
+
+        pre code,
+        #p0 {
+            display: block;
+            height: 360px;
+            background: #edebca;
+            padding: 22px;
+            color: black;
+            border: 1px solid #ff5722;
+            font-size: 16px;
+        }
+
+        pre:after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: red;
+            border: 5px solid white;
+            border-radius: 10px;
+            margin: -10px 0 0 -10px;
+        }
+
+        #p1 code {
+            -webkit-transform: rotate(10deg);
+            -webkit-transform-origin: top;
+            -moz-transform: rotate(10deg);
+            -moz-transform-origin: top;
+            transform: rotate(10deg);
+            transform-origin: top;
+        }
+
+        #p1:after {
+            top: 0;
+            left: 50%;
+        }
+        /*:hover {
+			-webkit-transform: rotate(-10deg);
+			-webkit-transform-origin: right top;
+			-ms-transform: rotate(-10deg);
+			-ms-transform-origin: right top;
+			transform: rotate(-10deg);
+			transform-origin: right top;
+		}*/
+
+        .button {
+            background-color: #121435;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 6px 3px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 150px;
+            transition-duration: 0.4s;
+           
+            
+        }
+
+        .button:hover {
+    background-color:white;
+    color: #ff5722;
+    
+    
+    
+}
+
+        @keyframes shake {
+            0% {
+                transform: skewY(5deg);
+            }
+            40% {
+                transform: skewY(-5deg);
+            }
+        }
+
+        .red {
+            color: red;
+        }
+
+        .background {
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="width:100%; height:100%; background-color:#eee">
+
+        <div style="background-color:#eee; width:100%; height:100px; color:#121435; border:1px solid #121435;">
+            <div style="display:inline-block">
+                <a class="fa fa-home" aria-hidden="true" style="font-size:250%; color:#ff5722;" href="index.html"></a>
+            </div>
+            <div style="display:inline-block; text-align:center; width:90%;">
+                <h1 id="header" style="text-align:center;">jQuery Html & Traversing </h1>
+            </div>
+
+        </div>
+
+        <div id="divv2" style="background-color:#eee; height:600px; width:200px; float:left;">
+            <div id="divv4" style="font-size:20px">
+                <ul>
+                    <li><b>Html Menu</b></li>
+                </ul>
+            </div>
+            <button class="button" id="one">Get</button>
+            <button class="button" id="two">Set</button>
+            <button class="button" id="three">Add</button>
+            <button class="button" id="four">Remove</button>
+            <button class="button" id="five">Css</button>
+            <button class="button" id="six">Demensions</button>
+        </div>
+
+        <div id="divv" style="background-color:#eee; height:600px; width:700px;float:left;">
+            <p id="p5"><br></p>
+            <pre id="p1"><code id="c1"><p id="p2" style="font-size:17px">jQuery contains powerful methods for changing and manipulating HTML elements and attributes.</p>
+            <p id="p3" style="font-size:17px">jQuery traversing, which means "move through", are used to "find" (or select) HTML elements based on their relation to other elements. Start with one selection and move through that selection until you reach the elements you desire.</p>
+            <p id="p4"> End.</p>
+            </code></pre>
+
+        </div>
+
+
+        <div id="divv3" style="background-color:#eee; height:600px; width:200px; float:right;">
+            <div style="font-size:20px">
+                <ul>
+                    <li id="test"><b>Traversing Menu</b></li>
+                </ul>
+            </div>
+            <button class="button one">Traversing</button>
+            <button class="button two">Ancestors</button>
+            <button class="button three">Descendants</button>
+            <button class="button four">Siblings</button>
+            <button class="button five">Filtering</button>
+            <button class="button six">Refresh</button>
+        </div>
+
+        <div style="background-color:#eee; clear:both; height:60px; border:1px solid #121435 ; font-size:20px;">
+            <center>
+                <br> Shadi.Nourriz@gmail.com
+            </center>
+        </div>
+
+    </div>
+</body>
+
+</html>
