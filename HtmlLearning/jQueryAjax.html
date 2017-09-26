@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".dropbtn").click(function () {
+				$(".dropdown-content").toggle();
+			});
+
+			$("#one").click(function () {
+				$("#dy").load("jQueryTraversing.html #p4");
+
+			});
+
+			/*$("#two").click(function () {
+// console.log(testdfdff);
+				$.get("test.html", function (data, status) {
+					console.log(data);
+					console.info(status);
+					//alert("Data: " + data + "\nStatus: " + status);
+
+				});
+
+
+			});*/
+			$.ajax({
+				type: "GET",
+				url: "test.html",
+				dataType: "html",
+				success: function (data) {
+					$("#two").click(function () {
+
+
+						$("#dy").html(data);
+
+					});
+				}
+			});
+			$.ajax({
+				type: "POST",
+				url:"test.html",
+				dataType:"html",
+				success:function(data){
+					$("#three").click(function(){
+						alert("done!");
+					});
+				}
+
+
+			});
+			$("#four").click(function(){
+
+			$.getJSON("/get/jsonData", function(data){
+			console.log(data);	
+			
+			
+			
+			});
+		
+
+			});
+		});
+
+			
+
+		
+	</script>
+	<style>
+		* {
+			margin: 0;
+		}
+
+		body {
+			font: 36px arial, helvetica, sans-serif;
+			color: #000;
+			background: #06c;
+		}
+
+		h1 {
+			margin: 10px;
+			font-size: 24px;
+			color: white;
+			height: 20px;
+		}
+
+		p {
+			height: 430px;
+			padding: 60px;
+		}
+
+		i {
+			display: block;
+			margin: 0 auto;
+			color: rgba(255, 255, 255, .5);
+			text-align: left;
+			text-decoration: none;
+			-webkit-transition: .5s;
+			transition: .5s;
+		}
+
+		i:hover {
+			background: rgba(255, 255, 255, .5);
+			color: white;
+			border-color: white;
+		}
+
+		#dy {
+
+			background: rgba(0, 0, 0, .3);
+			;
+		}
+
+		#dy i {
+			width: 200px;
+			height: 115px;
+			padding: 80px;
+			border-radius: 120px;
+			border: 60px solid rgba(255, 255, 255, .5);
+			text-align: center;
+		}
+
+		#dy i:hover {
+			border-radius: 180px;
+			box-shadow: 0 0 100px 50px rgba(255, 255, 255, .5);
+			opacity: 1;
+			color: black;
+		}
+
+
+
+
+
+		.dropbtn {
+
+			font-size: 27px;
+			background: #06c;
+
+			border: none;
+			cursor: pointer;
+			float: right;
+		}
+		/*.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}*/
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			overflow: auto;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			right: 0;
+			border-radius: 10px;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			font-size: 20px;
+			font-family: cursive;
+		}
+
+		.dropdown-content a:hover {
+			background-color: black;
+			color: white;
+		}
+
+		li {
+			list-style: none;
+			margin: 20px 0;
+			background: #def;
+		}
+
+		li a {
+			display: block;
+			width: 120px;
+			padding: 8px 0;
+			background: #06c;
+			color: white;
+			height: 20px;
+		}
+
+		#timing {
+			-webkit-transition: 1s ease-in-out;
+			transition: 1s ease-in-out;
+		}
+
+		li a:hover {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<h1 style="font-size:30px; font-family:cursive; text-align:center;">
+		<br>jQuery AJAX
+	</h1>
+	<br>
+
+	<a class="fa fa-home" aria-hidden="true" style="font-size:160%; color:white; text-align:left; height:30px;" href="index.html"></a>
+
+
+	<a class="dropdown">
+
+		<button class="dropbtn">
+			
+		<a class="fa fa-bars" aria-hidden="true" style="font-size:210%; color:white; float:right;"></a>
+
+	</button>
+
+	<div id="myDropdown" class="dropdown-content">
+		<a id="one" href="#load">Load</a>
+		<a id="two" href="#get">Get</a>
+		<a id="three" href="#post">Post</a>
+		<a id="four" href="#getJs">Get with jSon</a>
+		<a id="five" href="#postJs">Post with jSon</a>
+
+	</div>
+
+	<div>
+		<p id="dy"><i href="">Asynchronous JavaScript and XML</i>
+			<br>
+			<a id="test" style="font-size:20px; display:block;">In short; AJAX is about loading data in the background and display it on the webpage, without reloading the whole page.
+			
+			Examples of applications using AJAX: Gmail, Google Maps, Youtube, and Facebook tabs.</a>
+
+		</p>
+
+	</div>
+
+
+	<ul>
+		<li>
+			<a id="timing" style="font-size:24px; font-family:cursive;color:white; cursor:pointer;">Shadi.Nourriz@gmail.com</a>
+		</li>
+
+	</ul>
+
+
+
+	<hr style="border:2px solid black">
+</body>
+
+</html>
