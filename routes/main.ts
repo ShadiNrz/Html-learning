@@ -18,16 +18,27 @@ router.get("/get/jsonData", (req, res) => {
 });
 
 
-router.post("/post/sonData", (req, res) => {
+router.post("/post/jonData", (req, res) => {
 
     res.set("Content-Type", "application/json");
 
-    res.send({
-        result: 0, data: {
-            name : "shadi",
-            gender : "female"
-        }
-    })
+    var params = req.body;
+
+    if(params.type == "user"){
+        res.send({
+            result: 0, data: {
+                name : "shadi",
+                gender : "female"
+            }
+        })
+    }else{
+        res.send({
+            result : -1,
+            message : "you should send data"
+        })
+    }
+
+
 
 });
 
