@@ -1,0 +1,21 @@
+{
+  "name": "html-learning",
+  "description": "This project is writen for learning",
+  "main": "app.js",
+  "authors": [
+    "Shadi Nrz"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ShadiNrz/Html-learning",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
