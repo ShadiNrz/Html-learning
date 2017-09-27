@@ -1,6 +1,35 @@
 "use strict";
 const express_1 = require("express");
+const path = require("path");
 let router = express_1.Router();
+router.get("/", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/index.html');
+    res.sendFile(file);
+});
+router.get("/jquery.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/jQuery.html');
+    res.sendFile(file);
+});
+router.get("/jQueryAjax.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/jQueryAjax.html');
+    res.sendFile(file);
+});
+router.get("/jQuerySelector.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/jQuerySelector.html');
+    res.sendFile(file);
+});
+router.get("/jQueryEffects.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/jQueryEffects.html');
+    res.sendFile(file);
+});
+router.get("/jQueryTraversing.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/jQueryTraversing.html');
+    res.sendFile(file);
+});
+router.get("/test.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/test.html');
+    res.sendFile(file);
+});
 router.get("/get/jsonData", (req, res) => {
     res.set("Content-Type", "application/json");
     res.send({

@@ -1,7 +1,64 @@
 import {IRouter, Router} from "express";
+import * as path from "path";
 
 
 let router: Router = Router();
+
+router.get("/", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/index.html')
+    res.sendFile(file)
+
+});
+
+router.get("/jquery.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/jQuery.html')
+    res.sendFile(file)
+
+});
+
+router.get("/jQueryAjax.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/jQueryAjax.html')
+    res.sendFile(file)
+
+});
+
+router.get("/jQuerySelector.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/jQuerySelector.html')
+    res.sendFile(file)
+
+});
+
+router.get("/jQueryEffects.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/jQueryEffects.html')
+    res.sendFile(file)
+
+});
+
+router.get("/jQueryTraversing.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/jQueryTraversing.html')
+    res.sendFile(file)
+
+});
+
+router.get("/test.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/test.html')
+    res.sendFile(file)
+
+});
 
 
 router.get("/get/jsonData", (req, res) => {
