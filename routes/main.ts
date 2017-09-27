@@ -60,6 +60,13 @@ router.get("/test.html", (req, res) => {
 
 });
 
+router.post("/test.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/test.html')
+    res.sendFile(file)
+
+});
 
 router.get("/get/jsonData", (req, res) => {
 
@@ -75,7 +82,7 @@ router.get("/get/jsonData", (req, res) => {
 });
 
 
-router.post("/post/jonData", (req, res) => {
+router.post("/post/jsonData", (req, res) => {
 
     res.set("Content-Type", "application/json");
 
@@ -94,8 +101,6 @@ router.post("/post/jonData", (req, res) => {
             message : "you should send data"
         })
     }
-
-
 
 });
 

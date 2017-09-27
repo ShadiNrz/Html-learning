@@ -30,6 +30,10 @@ router.get("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);
 });
+router.post("/test.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/test.html');
+    res.sendFile(file);
+});
 router.get("/get/jsonData", (req, res) => {
     res.set("Content-Type", "application/json");
     res.send({
@@ -39,7 +43,7 @@ router.get("/get/jsonData", (req, res) => {
         }
     });
 });
-router.post("/post/jonData", (req, res) => {
+router.post("/post/jsonData", (req, res) => {
     res.set("Content-Type", "application/json");
     var params = req.body;
     if (params.type == "user") {
