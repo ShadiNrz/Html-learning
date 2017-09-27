@@ -26,47 +26,76 @@
 
 
 			});*/
-			$.ajax({
-				type: "GET",
-				url: "test.html",
-				dataType: "html",
-				success: function (data) {
-					$("#two").click(function () {
+			$("#two").click(function () {
+
+				$.ajax({
+					type: "GET",
+					url: "/test.html",
+					dataType: "html",
+					success: function (data) {
 
 
 						$("#dy").html(data);
 
-					});
-				}
+
+
+					}
+				});
+
 			});
-			$.ajax({
-				type: "POST",
-				url:"test.html",
-				dataType:"html",
-				success:function(data){
-					$("#three").click(function(){
+
+			$("#three").click(function () {
+				$.ajax({
+					type: "POST",
+					url: "/test.html",
+					dataType: "html",
+					success: function (data) {
+
 						alert("done!");
-					});
-				}
 
+					}
+				});
 
 			});
-			$("#four").click(function(){
 
-			$.getJSON("/get/jsonData", function(data){
-			console.log(data);	
-			
-			
-			
+			$("#four").click(function () {
+				//alert(data);
+
+
+				$.ajax({
+					dataType: "json",
+					url: "/get/jsonData",
+					type: "GET",
+					success: function (data) {
+
+						console.log(data);
+
+					}
+				});
+
 			});
-		
+			$("#five").click(function () {
+				//console.log(data);
 
+				$.ajax({
+					dataType: "json",
+					url: "/post/jonData",
+					type: "POST",
+					data: { type: "user" },
+					success: function (data) {
+						console.log(data);
+
+					}
+
+
+
+				});
 			});
 		});
 
-			
-
-		
+/*$.getJSON("/get/jsonData", function(data){
+			console.log(data);	
+			});*/
 	</script>
 	<style>
 		* {
