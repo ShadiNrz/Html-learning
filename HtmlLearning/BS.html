@@ -7,18 +7,132 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .row > div{
+    margin-bottom: 15px;
+}
+.header{
+    min-height: 90px;
+}
+.footer{
+    min-height: 60px;
+}
+.header, .footer{
+    background: #2f2f2f;
+}
+.sidebar{
+    background: #dbdfe5;
+}
+.intro{
+    background: #7e8aa0;
+    min-height: 250px;
+    
+}
+.section{
+    min-height: 150px;
+    background: #dbdfe5;
+    top:50%;
+    left:50%;
+    text-align: center;
+    
+}
+.section.bg-alt{
+    background: #b4bac0;
+}
+
+
+</style>
 </head>
 <body>
+<div class="container">
+  <h1>Bootstrap Example</h1>
+  
+   <div class="row">
+        <div class="col-sm-12">
+            <div class="header" ></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="intro">
+                <p class="lead"> The 5 Most Popular Frontend Frameworks of 2017 Compared </p>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>name</th>
+                                <th>released</th>
+                                <th>size</th>
+                                <th>icon set</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>bootstrap</td>
+                                <td>2011</td>
+                                <td>154 KB</td>
+                                <td>Glyphicons</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>foundation by zurb</td>
+                                <td>2011</td>
+                                <td>197.5 KB</td>
+                                <td>foundation iconfonts</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>semantic ui</td>
+                                <td>2013</td>
+                                <td>806 KB</td>
+                                <td>font awesome</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>pure by yahoo</td>
+                                <td>2013</td>
+                                <td>16 KB</td>
+                                <td>none</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>ulkit by yootheme</td>
+                                <td>2013</td>
+                                <td>326.9 KB</td>
+                                <td>svg icon</td>
+                            </tr>
+                        </body>
 
-<div class="container-fluid">
-  <h1>Hello World!</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <div class="row">
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-  </div>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="section">
+                <p class="text-center">Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, <ins>mobile-first web sites.</ins></p>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="section bg-alt">
+                <p class="align-center">Bootstrap is completely free to download and use!</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="section">
+                <p class="text-justify">Quickly prototype your ideas or build your entire app with our Sass variables and mixins, <ins>responsive grid system</ins>, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="footer"></div>
+        </div>
+    </div>
 </div>
 
 </body>
-</html>
+</html> 
