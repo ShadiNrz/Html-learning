@@ -26,6 +26,10 @@ router.get("/jQueryTraversing.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/jQueryTraversing.html');
     res.sendFile(file);
 });
+router.get("/BS.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/BS.html');
+    res.sendFile(file);
+});
 router.get("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);

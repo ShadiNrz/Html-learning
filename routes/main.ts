@@ -52,6 +52,15 @@ router.get("/jQueryTraversing.html", (req, res) => {
 
 });
 
+
+router.get("/BS.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/BS.html');
+    res.sendFile(file)
+
+});
+
 router.get("/test.html", (req, res) => {
 
     // res.set("Content-Type", "application/json");
