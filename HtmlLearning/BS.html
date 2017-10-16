@@ -4,9 +4,9 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
   <style type="text/css">
   .row > div{
     margin-bottom: 15px;
@@ -46,10 +46,14 @@
 <body>
 <div class="container">
   <h1>Bootstrap Example</h1>
-  
+  <div>
+  <div class="col-sm-9">
    <div class="row">
+        
         <div class="col-sm-12">
-            <div class="header" ></div>
+            <div class="jumbotron" >
+                    <h4><strong>Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</strong><h4>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -113,25 +117,48 @@
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="section">
-                <p class="text-center">Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, <ins>mobile-first web sites.</ins></p>
+                <p class="text-center well well-lg">Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, <ins>mobile-first web sites.</ins></p>
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
             <div class="section bg-alt">
-                <p class="align-center">Bootstrap is completely free to download and use!</p>
+                <p class="align-center ">Bootstrap is completely free to download and use!</p>
             </div>
         </div>
         <div class="col-sm-12 col-md-4">
             <div class="section">
-                <p class="text-justify">Quickly prototype your ideas or build your entire app with our Sass variables and mixins, <ins>responsive grid system</ins>, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+                <p class="text-justify well">Quickly prototype your ideas or build your entire app with our Sass variables and mixins, <ins>responsive grid system</ins>, extensive prebuilt components, and powerful plugins built on jQuery.</p>
             </div>
         </div>
     </div>
+    <div class="alert alert-info alert-dismissable fade in">
+        <strong>Attention!</strong> for more information you should <a href="getbootstrap.com" class="alert-link ">read this page
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </a>
+        
+    </div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="footer"></div>
+            <div class="footer">
+                <a href="#"><span class="glyphicon glyphicon-envelope" style="color:white; font-size:20px"> shadi.nourriz@gmail.com</span></a>
+            </div>
         </div>
     </div>
+</div>
+
+
+<div class="col-sm-3 sidenav">
+    <center ><img class="img responsive" src="bootstrap-stack.png" width="170px" height="120px" ></center>
+    <ul class="nav nav-stacked">
+        
+            <li class="active btn "><a>one</a></li>
+            <li class="active btn "><a>two</a></li>
+        <li class="active btn "><a>three</a></li>
+        <li class="active btn "><a>four</a></li>
+        <li class="active btn "><a>five</a></li>
+        
+    </ul>
+</div>
 </div>
 
 </body>
