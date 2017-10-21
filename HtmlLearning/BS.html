@@ -1,189 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
-  <script src="lib/jquery/dist/jquery.min.js"></script>
-  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <style type="text/css">
-  .row > div{
-    margin-bottom: 15px;
-}
-.header{
-    min-height: 90px;
-}
-.footer{
-    min-height: 60px;
-}
-.header, .footer{
-    background: #2f2f2f;
-}
-.sidebar{
-    background: #dbdfe5;
-}
-.intro{
-    background: #7e8aa0;
-    min-height: 250px;
-    
-}
-.section{
-    min-height: 150px;
-    background: #dbdfe5;
-    top:50%;
-    left:50%;
-    text-align: center;
-    
-}
-.section.bg-alt{
-    background: #b4bac0;
-}
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .row>div {
+            margin-bottom: 15px;
+        }
 
+        .header {
+            min-height: 90px;
+        }
 
-</style>
+        .footer {
+            min-height: 60px;
+        }
+
+        .header,
+        .footer {
+            background: #2f2f2f;
+        }
+
+        .sidebar {
+            background: #dbdfe5;
+        }
+
+        .intro {
+            background: #7e8aa0;
+            min-height: 250px;
+        }
+
+        .section {
+            min-height: 150px;
+            background: #dbdfe5;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+        }
+
+        .section.bg-alt {
+            background: #b4bac0;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-  <h1>Bootstrap Example</h1>
-  <div>
-  <div class="col-sm-9">
-   <div class="row">
-        
-        <div class="col-sm-12">
-            <div class="jumbotron" >
-                    <h4><strong>Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</strong><h4>
+    <div class="container">
+        <h1>Bootstrap Example</h1>
+        <div>
+            <div class="col-sm-12">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        <a class="navbar-brand" href="#" style="font-size:25px; color:white">Titles</a>
+                    </div>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" style="font-size:25px; color:white"><span class="glyphicon glyphicon-home"></span>home</a></li>
+                        </ul>
+                    </div>
+                    </nav>
             </div>
+
+
+
+
+            <div class="col-sm-9">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="jumbotron">
+                            <h4><strong>Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</strong>
+                                <h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="intro">
+                            <p class="lead"> The 5 Most Popular Frontend Frameworks of 2017 Compared </p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>name</th>
+                                            <th>released</th>
+                                            <th>size</th>
+                                            <th>icon set</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>bootstrap</td>
+                                            <td>2011</td>
+                                            <td>154 KB</td>
+                                            <td>Glyphicons</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>foundation by zurb</td>
+                                            <td>2011</td>
+                                            <td>197.5 KB</td>
+                                            <td>foundation iconfonts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>semantic ui</td>
+                                            <td>2013</td>
+                                            <td>806 KB</td>
+                                            <td>font awesome</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>pure by yahoo</td>
+                                            <td>2013</td>
+                                            <td>16 KB</td>
+                                            <td>none</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>ulkit by yootheme</td>
+                                            <td>2013</td>
+                                            <td>326.9 KB</td>
+                                            <td>svg icon</td>
+                                        </tr>
+</tbody>
+
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="section">
+            <p class="text-center well well-lg">Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive,
+                <ins>mobile-first web sites.</ins>
+            </p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="intro">
-                <p class="lead"> The 5 Most Popular Frontend Frameworks of 2017 Compared </p>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>name</th>
-                                <th>released</th>
-                                <th>size</th>
-                                <th>icon set</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>bootstrap</td>
-                                <td>2011</td>
-                                <td>154 KB</td>
-                                <td>Glyphicons</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>foundation by zurb</td>
-                                <td>2011</td>
-                                <td>197.5 KB</td>
-                                <td>foundation iconfonts</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>semantic ui</td>
-                                <td>2013</td>
-                                <td>806 KB</td>
-                                <td>font awesome</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>pure by yahoo</td>
-                                <td>2013</td>
-                                <td>16 KB</td>
-                                <td>none</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>ulkit by yootheme</td>
-                                <td>2013</td>
-                                <td>326.9 KB</td>
-                                <td>svg icon</td>
-                            </tr>
-                        </body>
+    <div class="col-sm-6 col-md-4">
+        <div class="section bg-alt">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse">you can hide this!</a>
+                        </h4>
+                    </div>
+                    <div id="collapse" class="panel-collapse collapse in">
+                        <div class="panel-body">
 
-                    </table>
+            <p class="align-center ">Bootstrap is completely free to download and use!</p>
+            <ul class="list-group">
+                <li class="list-group-item">websites<span class="badge">7,583,905</span></li>
+                <li class="list-group-item">popularity on github<span class="badge">111,000</span></li>
+            </ul>
+
+
+        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="section">
+            <p class="text-justify well">Quickly prototype your ideas or build your entire app with our Sass variables and mixins,
+                <ins>responsive grid system</ins>, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+        </div>
+    </div>
+</div>
+<div class="alert alert-info alert-dismissable fade in">
+    <strong>Attention!</strong> for more information you should <a href="getbootstrap.com" class="alert-link ">read this page
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </a>
+
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="footer">
+            <div class="panel panel-primary ">
+                <div class="panel-heading ">Connect with:
+                    <div class="panel-body"><a href="#"><span class="glyphicon glyphicon-envelope" style="color:white; font-size:20px"> shadi.nourriz@gmail.com</span></a>
+                    </div>
+
+                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                          </div>
+                        </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <div class="section">
-                <p class="text-center well well-lg">Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, <ins>mobile-first web sites.</ins></p>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="section bg-alt">
-                <p class="align-center ">Bootstrap is completely free to download and use!</p>
-                <ul class="list-group">
-                    <li class="list-group-item">websites<span class="badge">7,583,905</span></li>
-                    <li class="list-group-item">popularity on github<span class="badge">111,000</span></li>
-                </ul>
-                
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            <div class="section">
-                <p class="text-justify well">Quickly prototype your ideas or build your entire app with our Sass variables and mixins, <ins>responsive grid system</ins>, extensive prebuilt components, and powerful plugins built on jQuery.</p>
-            </div>
-        </div>
-    </div>
-    <div class="alert alert-info alert-dismissable fade in">
-        <strong>Attention!</strong> for more information you should <a href="getbootstrap.com" class="alert-link ">read this page
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        </a>
-        
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="footer">
-                <a href="#"><span class="glyphicon glyphicon-envelope" style="color:white; font-size:20px"> shadi.nourriz@gmail.com</span></a>
-            </div>
-        </div>
-    </div>
-    
-    <ul class="pager">
-            
-            <li class="previous">
-                <a href="#">previous</a>
-            </li>
-            <ul class="pagination">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-            </ul>
-            <li class="next">
-                <a href="#">next</a>
-            </li>
-        </ul>
-    
+</div>
+
+<ul class="pager">
+
+    <li class="previous">
+        <a href="#">previous</a>
+    </li>
+    <ul class="pagination">
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+    </ul>
+    <li class="next">
+        <a href="#">next</a>
+    </li>
+</ul>
+
 </div>
 
 
 
 <div class="col-sm-3 sidenav">
-    <center ><img class="img responsive" src="images/bootstrap-stack.png" width="170px" height="120px" ></center>
+    <center><img class="img responsive" src="images/bootstrap-stack.png" width="170px" height="120px"></center>
     <ul class="nav nav-stacked">
-        
-            <li class="active btn "><a>one</a></li>
-            <li class="active btn "><a>two</a></li>
+
+        <li class="active btn "><a>one</a></li>
+        <li class="active btn "><a>two</a></li>
         <li class="active btn "><a>three</a></li>
         <li class="active btn "><a>four</a></li>
         <li class="active btn "><a>five</a></li>
-        
+
     </ul>
 </div>
 
 </div>
 
 </body>
-</html> 
+
+</html>
