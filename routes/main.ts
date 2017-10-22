@@ -61,6 +61,14 @@ router.get("/BS.html", (req, res) => {
 
 });
 
+router.get("/BS_rtl.html", (req, res) => {
+
+    // res.set("Content-Type", "application/json");
+    var file = path.join(__dirname+'/../HtmlLearning/BS_rtl.html');
+    res.sendFile(file)
+
+});
+
 router.get("/semantic.html", (req, res) => {
 
     // res.set("Content-Type", "application/json");

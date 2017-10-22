@@ -30,6 +30,10 @@ router.get("/BS.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/BS.html');
     res.sendFile(file);
 });
+router.get("/BS_rtl.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/BS_rtl.html');
+    res.sendFile(file);
+});
 router.get("/semantic.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/semantic.html');
     res.sendFile(file);
