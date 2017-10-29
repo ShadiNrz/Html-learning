@@ -9,6 +9,7 @@
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <style type="text/css">
+   
         .row>div {
             margin-bottom: 15px;
         }
@@ -46,15 +47,24 @@
         .section.bg-alt {
             background: #b4bac0;
         }
+        .affix {
+      top: 0;
+      width: 1120px;
+      z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
     </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20"> 
     <div class="container">
         <h1>Bootstrap Example</h1>
         <div>
             <div class="col-sm-12">
-                <nav class="navbar navbar-inverse">
+                <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="205">
                     <div class="container-fluid">
                         <div class="navbar-header">
                         <a class="navbar-brand" href="#" style="font-size:25px; color:white">Titles</a>
@@ -74,7 +84,7 @@
             <div class="col-sm-9">
                 <div class="row">
 
-                    <div class="col-sm-12">
+                    <div class="col-sm-12" id="first">
                         <div class="jumbotron">
                             <h4><strong>Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</strong>
                                 <h4>
@@ -85,6 +95,7 @@
                     <div class="col-sm-12">
                         <div class="intro">
                             <p class="lead"> The 5 Most Popular Frontend Frameworks of 2017 Compared </p>
+                            <input class="form-control" id="myInput" type="text" placeholder="Search..">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -96,7 +107,7 @@
                                             <th>icon set</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="myTable">
                                         <tr>
                                             <td>1</td>
                                             <td>bootstrap</td>
@@ -139,7 +150,7 @@
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row" id="second">
     <div class="col-sm-6 col-md-4">
         <div class="section">
             <p class="text-center well well-lg">Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive,
@@ -187,7 +198,7 @@
 
 </div>
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12" id="third">
         <div class="footer">
             <div class="panel panel-primary ">
                 
@@ -282,18 +293,20 @@
 
 
 
-<div class="col-sm-3 sidenav">
+<div class="col-sm-3 sidenav" id="myScrollspy">
     <div>
     <center><img class="img responsive" src="images/bootstrap-stack.png" width="170px" height="120px"></center>
-    <ul class="nav nav-stacked">
+    
+    <ul class="nav nav-pills nav-stacked">
 
-        <li class="active btn "><a>one</a></li>
-        <li class="active btn "><a>two</a></li>
-        <li class="active btn "><a>three</a></li>
-        <li class="active btn "><a>four</a></li>
-        <li class="active btn "><a>five</a></li>
+        <li class="active btn"><a href="#first">one</a></li>
+        <li class="btn"><a href="#second">two</a></li>
+        <li class="btn"><a href="#third">three</a></li>
+        <li class="btn"><a>four</a></li>
+        <li class="btn"><a>five</a></li>
 
     </ul>
+
 </div>
 </br>
 </br>
@@ -387,6 +400,15 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
         });
+
+        $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
         </script>
         
 
