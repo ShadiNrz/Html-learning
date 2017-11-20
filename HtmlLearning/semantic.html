@@ -52,6 +52,17 @@
         </br>
       </div>
 
+
+
+
+      <div class="ui breadcrumb" style="float:left">
+          <a class="section" style="color:gray">Home</a>
+          <i class="right angle icon divider" style="color:white"></i>
+          <a class="section" style="color:gray">html</a>
+          <i class="right arrow icon divider" style="color:white"></i>
+          <div class="active section" >semantic-ui</div>
+        </div>
+      </br>
     </div>
 
 
@@ -76,53 +87,90 @@
 
 
 
-          <div class="seven wide right floated column">
+          <div class="six wide right floated column">
 
-            <div class="ui card" style="width:350px">
-              <div class="content">
-
+            <form class="ui large form">
+              <div class="ui stacked segment">
                 
-
-               
-                 <span style="float:left">female</span>
-                 
-                <div>
+                  <div class="row">
+                  <span style="float:left">female
+                      <div class="ui checkbox">
+                          <input type="checkbox">
+                          <label></label>
+                        </div>
+                  </span>
                   
-                  <img class="ui tiny circular image" src="images/molly.png">
+                        <img class="ui tiny circular left floated image" src="images/molly.png">
+                        
+
+                  <span style="float:right">male
+                  
+                      <div class="ui checkbox">
+                          <input type="checkbox">
+                          <label></label>
+                        </div>
+                  </span>
+                  
+                  
+                        <img class="ui tiny circular right floated image" src="images/matthew.png">
+                </div>  
                 
+
+                        
+                           
+                
+                              <div class="field">
+                               <input placeholder="First Name" type="text">
+                            </div>
+                            <div class="field">
+                             <input placeholder="Last Name" type="text">
+                            </div>
+                        
+                               
+                            
+                                
+                            <div class="field">
+                      
+                                <div class="ui fluid search selection dropdown">
+                                  <input name="country" value="sv" type="hidden">
+                                  <i class="dropdown icon"></i>
+                                  <div class="default text">Select Country</div>
+                                  <div class="menu">
+                              <div class="item" data-value="us"><i class="us flag"></i>United states</div>
+                              <div class="item" data-value="ir"><i class="ir flag"></i>Iran</div>
+                              <div class="item" data-value="fr"><i class="fr flag"></i>France</div>
+                              <div class="item" data-value="de"><i class="de flag"></i>Germany</div>
+                              <div class="item" data-value="ca"><i class="ca flag"></i>Canada</div>
+                                  </div>
+                                </div>
+                              </div>
+
+                                  
+                            
+                           
+
+
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input name="email" placeholder="E-mail address" type="text">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input name="password" placeholder="Password" type="password">
+                  </div>
+                </div>
+
               
-               
-                
-                <span style="float:right">male</span>
-                
-                      <img class="ui tiny circular right floated image" src="images/matthew.png">
-                  
-                
+                <div class="ui fluid large teal submit button">sign-up</div>
               </div>
-            </br>  
-              
-            <div class="ui right labeled large input">
-              
-                  
-                  <input placeholder="first name" type="text">
-                  <a class="ui tag label">first name</a>
-            </div>
-          </br>
-        </br>
         
-            <div class="ui right labeled large input">   
-              
-              
-                  <input placeholder="last name" type="text">
-                  <a class="ui tag label">last name</a>
-                
-              
-            
+             
         
-
-        </div>
-      
-      </div>
+            </form>
+          </div>
 
 
 
@@ -130,14 +178,32 @@
           </div>
         </div>
         </div>
-        <div class="row">
-          <div class="center aligned column">
-            <a class="ui huge button"></a>
-          </div>
-        </div>
-      
-    
+        
 
+      <center>
+        <div class="ui large steps">
+            <a class="step">
+              <i class="html5 icon"></i>
+              <div class="content">
+                <div class="title">HTML</div>
+                <div class="description">Learn HTML5 in simple and easy steps starting from basic to advanced!</div>
+              </div>
+            </a>
+            <a class="step">
+                <i class="css3 icon"></i>
+              <div class="content">
+                <div class="title">css3</div>
+                <div class="description">you can control your Web pages look</div>
+              </div>
+            </a>
+            <a class="active step">
+                <div class="content">
+                  <div class="title">Semantic-Ui</div>
+                  <div class="description">modern front-end development framework</div>
+                </div>
+              </a>
+          </div>
+        </center>
 
 
 
@@ -156,7 +222,7 @@
     </div>
 
 
-    <div class="ui inverted vertical segment">
+    <div class="ui inverted vertical footer segment">
       <div class="ui container" style="padding:20px">
         <div class="ui list">
           <div class="item">
