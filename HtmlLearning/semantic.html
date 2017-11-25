@@ -9,11 +9,7 @@
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="lib/dist/semantic.min.js"></script>
   <style>
-    .footer.segment{
-      padding: 2em 1em;
     
-
-    }
 
   </style>
 </head>
@@ -22,8 +18,30 @@
 <body>
 
 
+    <div class="ui left demo vertical inverted sidebar labeled icon menu" style="background-color:teal">
+        <a class="item">
+          <i class="home icon"></i>
+          Home
+        </a>
+        <a class="item">
+          <i class="block layout icon"></i>
+          Topics
+        </a>
+        <a class="item">
+          <i class="smile icon"></i>
+          Friends
+        </a>
+      </div>
+
+
+
+
+
+
 
   <div class="pusher">
+
+      <div class="ui sticky">
     <div class="ui inverted vertical center aligned segment" style="background-color:#380B61">
 
       <div class="ui container">
@@ -35,8 +53,8 @@
           <a class="item">Work</a>
 
           <div class="right item">
-            <a class="ui inverted button">button</a>
-            <a class="ui inverted button">button</a>
+            <a class="ui inverted button" id="usidebar">Sidebar</a>
+            <a class="ui inverted button" id="testbutton">Modal</a>
           </div>
         </div>
       </div>
@@ -52,18 +70,43 @@
         </br>
       </div>
 
-
-
+<div>
+      <div class="ui fluid category search" style="float:right"> 
+          <div class="ui icon input">
+            <input class="prompt" placeholder="Search UI..." type="text">
+            <i class="search icon"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </br>
 
       <div class="ui breadcrumb" style="float:left">
           <a class="section" style="color:gray">Home</a>
           <i class="right angle icon divider" style="color:white"></i>
           <a class="section" style="color:gray">html</a>
           <i class="right arrow icon divider" style="color:white"></i>
-          <div class="active section" >semantic-ui</div>
-        </div>
-      </br>
+          <div class="active section">semantic-ui</div>
+      </div>
+    </br>
+      
+    
+
+
+
+
+   
+    
     </div>
+
+  </div>
+
+
+
+
+
+
+  
+  </div>
 
 
     <div class="ui vertical segment">
@@ -81,7 +124,27 @@
             <h3 class="ui header">Concise HTML</h3>
             <p>Semantic UI treats words and classes as exchangeable concepts.</p>
           </div>
+
+
+
+
+
+          <div class="ui info message">
+              <i class="close icon"></i>
+              <div class="header">
+               Attention PLz!
+              </div>
+              <ul class="list">
+                <li>For more information see <b><a href="https://semantic-ui.com">https://semantic-ui.com</a></b></li>
+              
+              </ul>
+            </div>
         </div>
+
+
+
+
+       
 
 
 
@@ -131,11 +194,11 @@
                                 
                             <div class="field">
                       
-                                <div class="ui fluid search selection dropdown">
+                                <div class="ui fluid search selection dropdown" id="select">
                                   <input name="country" value="sv" type="hidden">
                                   <i class="dropdown icon"></i>
                                   <div class="default text">Select Country</div>
-                                  <div class="menu">
+                                  <div class="menu" id="srch">
                               <div class="item" data-value="us"><i class="us flag"></i>United states</div>
                               <div class="item" data-value="ir"><i class="ir flag"></i>Iran</div>
                               <div class="item" data-value="fr"><i class="fr flag"></i>France</div>
@@ -164,7 +227,7 @@
                 </div>
 
               
-                <div class="ui fluid large teal submit button">sign-up</div>
+                <div class="ui fluid large teal submit button" data-content="Fill All!!!" id="pop">sign-up</div>
               </div>
         
              
@@ -181,7 +244,7 @@
         
 
       <center>
-        <div class="ui large steps">
+        <div class="ui large steps" style="height:90px">
             <a class="step">
               <i class="html5 icon"></i>
               <div class="content">
@@ -204,46 +267,363 @@
               </a>
           </div>
         </center>
+      </br>
+    </br>
+
+
+  <div class="ui items">
+  <div class="item">
+    <div>
+        <div class="ui small circular rotate reveal image">
+  <img src="images/semantic-ui-2.jpg" class="visible content">
+  <img src="images/smile.jpeg" class="hidden content">
+</div>
+    </br>
+  </br>
+
+  <div class="overlay" style="position: relative; top: 100px; z-index: 10;">
+      
+          <div class="ui labeled icon vertical menu">
+            <a class="item"><i class="twitter icon"></i> Tweet</a>
+            <a class="item"><i class="facebook icon"></i> Share</a>
+            <a class="item"><i class="mail icon"></i> E-mail</a>
+          </div>
+        </div>
+
+        <div class="overlay placeholder" style="display: block; visibility: hidden;">
+            <div class="ui labeled icon vertical menu">
+              <a class="item"><i class="twitter icon"></i> Tweet</a>
+              <a class="item"><i class="facebook icon"></i> Share</a>
+              <a class="item"><i class="mail icon"></i> E-mail</a>
+            </div>
+          </div>
+        
+      
+
+        </div>
+<div class="middle aligned content" style="margin-right: 60px">
+    <div class="header" style="font-size:30px;margin-left:40px">Description</div> 
+
+
+    <div class="ui mini horizontal statistic" style="float:right">
+        <div class="value" style="color:teal">
+          2,204
+        </div>
+        <div class="label" style="color:teal">
+            rate
+          </div>
+      </div>
+
+    </br>
+  </br>
+    <div class="description" style="font-size:24px">
+      <p style="margin-left:40px">Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.
+          
+          According to the Semantic UI website, the goal of the framework is to empower designers and developers “by creating a language for sharing UI”. They do this by leveraging a semantic, descriptive language for its classes and naming conventions. Instead of using abbreviations, as other frameworks do, it utilizes real words in a manner closer to plain English.
+      </p>
+      
+    
+    </div>
+  </div>
+
+    
 
 
 
-    <div class="ui vertical segment">
-      <div class="ui text container">
-        <h3 class="ui header">subject</h3>
 
-        <a class="ui medium button">button</a>
+
+  </br>
+    <div class="ui list" style="margin-right:50px">
+        <div class="item">
+            <i class="right triangle icon"></i>
+            <div class="content" style="margin-right:50px">
+              <div class="header" style="font-size:23px">Semantic UI Component Library</div>
+            </br>
+            
+              <div class="description" style="font-size:20px"> <p>As most of us are probably aware, Bootstrap and Foundation are the current leaders among front-end development frameworks. But history has shown us that eventually something better will come along and in this case that might not be so far away.<p>
+                
+               <p>This article will introduce you to a new candidate on the framework landscape called Semantic UI.<p>
+              
+                <p>Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.<p>
+                
+                <p>According to the Semantic UI website, the goal of the framework is to empower designers and developers “by creating a language for sharing UI”. They do this by leveraging a semantic, descriptive language for its classes and naming conventions. Instead of using abbreviations, as other frameworks do, it utilizes real words in a manner closer to plain English.</p></div>
+            </div>
+          
+            
+          </div>
+
+        </br>
+      </br>
+    </br>
+
+          <table class="ui inverted teal table">
+            <thead>
+              <tr><th>Definition Types</th>
+              <th>Example</th>
+              <th>like</th>
+            </tr></thead><tbody>
+              <tr>
+                <td>UI Element</td>
+                <td>Button 	
+                  Label,label,Input,Loader,Segment</td>
+                <td><i class="heart outline icon"></i>
+              </td>
+              </tr>
+              <tr>
+                <td>UI Collection</td>
+                <td>
+                  Forms,Tables,Grids(Layout),Menus
+              </td>
+                <td><i class="heart outline icon"></i></td>
+              </tr>
+              <tr>
+                <td>UI View</td>
+                <td>
+                  Comment Feed,Activity Feed,Product List
+              </td>
+                <td><i class="heart outline icon"></i></td>
+              </tr>
+              <tr>
+                <td>UI Module</td>
+                <td>
+                  Popups,Modals,Chat Rooms
+              </td>
+                <td><i class="heart outline icon"></i></td>
+              </tr>
+             
+            </tbody>
+          </table>
+
+
+
+
+
+          
+              
+
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+   
         <h4 class="ui horizontal header divider">
           
-          <a href="#">devider</a>
-          <h3 class="ui header">subject2</h3>
+          <a href="#">Devider</a></h4>
 
-          <a class="ui medium button">button</a>
+
+
+          <div class="ui inverted segment" style="background-color:#380B61; margin-left:100px; margin-right:50px;">
+              <div class="ui inverted accordion">
+                <div class="active title" style="font-size: 20px">
+                  <i class="dropdown icon"></i>
+                  what is semantic-ui?
+                </div>
+                <div class="active content" style="font-size: 15px">
+                  <p>Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.</p>
+                </div>
+                <div class="title" style="font-size: 20px">
+                  <i class="dropdown icon"></i>
+                  What is a UI framework?
+                </div>
+                <div class="content" style="font-size: 15px">
+                  <p>Web User Interface Framework. The Web UI is an HTML-based application used to configure and manage the server appliance from a remote client. By extending the Web UI, you can build a consistent, reliable, and extensible UI. ... To present these items, the framework provides several page types.</p>
+                </div>
+              
+              </div>
+            </div>
+          </br>
+         
       </div>
     </div>
 
+    
 
-    <div class="ui inverted vertical footer segment">
-      <div class="ui container" style="padding:20px">
-        <div class="ui list">
-          <div class="item">
-            <i class="marker icon"></i>
-            <div class="content">
-              Iran
+  
+
+
+    
+  <div class="footer" style="background-color:white">
+
+      <div style="float:right; margin-right:20px"><div class="header">
+         <b> Rating</b>
+      </div>
+    
+          <div class="ui star rating" data-rating="3" style="float:left"></div>
+        
+        </div>
+
+
+
+
+          <div class="ui violet top attached tabular menu" style="font-size: 20px">
+              <a class="item active" data-tab="first">Contact with:</a>
+              <a class="item" data-tab="second" style="color:black">location</a>
+              
             </div>
-          </div>
-          <div class="item">
-            <i class="mail icon"></i>
-            <div class="content">
-              <a href="#">shadi.nourriz@gmail.com"</a>
+            <div class="ui bottom attached tab segment active" data-tab="first">
+                <i class="ui violet mail icon"></i>
+                <div class="content">
+                <a href="#">shadi.nourriz@gmail.com</a>
+                </div>
             </div>
-          </div>
+            <div class="ui bottom attached tab segment" data-tab="second">
+                <i class="ui violet marker icon"></i>
+                <div class="content">
+                 <a> Iran</a>
+                </div>
+               
+              </div>
+              
+              <div style="padding:20px; background-color:#380B61"></div>
+            </div>
+           
+          
+
+
+
+
+
+       
 
 
         
 
-      </div>
-    </div>
-  </div>
+
+
+          <div class="ui modal">
+              <div class="header">Delete your account?</div>
+              <div class="content">
+                <p>Are you sure you want to delete your account</p>
+                
+              </div>
+              <div class="actions">
+                  <div class="ui negative button">No</div>
+                  <div class="ui positive button">yes</div>
+            </div>
+          </div>
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+     
+   
+ 
+
+
+
+
+<script>
+  $(document)
+    .ready(function() {
+
+     
+      $('.main.menu').visibility({
+        type: 'fixed'
+      });
+      $('.overlay').visibility({
+        type: 'fixed',
+        
+        offset:80
+      });
+
+     
+
+      $('.ui.modal')
+  .modal('attach events', '#testbutton','show')
+;
+
+$('.ui.labeled.icon.sidebar')
+  .sidebar('attach events','#usidebar','toggle')
+;
+
+$('.accordion')
+  .accordion({
+    selector: {
+      trigger: '.title .icon'
+    }
+  })
+;
+
+$('.menu .item')
+  .tab()
+;
+
+
+$('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
+
+
+
+
+$('#select')
+  .dropdown()
+;
+
+
+var
+  content = [
+    {
+      title: 'Semantic-ui',
+      description: 'A UI',
+    },
+    {
+      title: 'bootstrap',
+      description: 'Another UI',
+    }
+  ]
+;
+$('.ui.search')
+  .search({
+    source : content,
+    searchFields   : [
+      'title'
+    ],
+    searchFullText: false
+  })
+;
+
+
+$('#pop')
+  .popup({
+    inline: true
+  })
+;
+
+
+
+$('.rating')
+  .rating('enable', 'clearable', 'auto')
+;
+
+  
+     
+    })
+  ;
+</script>
+
 
 
 
