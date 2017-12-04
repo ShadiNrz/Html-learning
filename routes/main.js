@@ -38,6 +38,10 @@ router.get("/semantic.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/semantic.html');
     res.sendFile(file);
 });
+router.get("/semantic_rtl.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/semantic_rtl.html');
+    res.sendFile(file);
+});
 router.post("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);
