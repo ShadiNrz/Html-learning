@@ -5,9 +5,10 @@
   <title>Semantic-Ui Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" type="text/css" href="lib/dist/semantic.rtl.min.css">
   <script src="lib/jquery/dist/jquery.min.js"></script>
-  <script src="lib/dist/semantic.rtl.min.js"></script>
+  <script src="lib/dist/semantic.min.js"></script>
   <style>
     
 
@@ -15,10 +16,10 @@
 </head>
 
 
-<body>
+<body dir="rtl">
 
 
-    <div class="ui left demo vertical inverted sidebar labeled icon menu" style="background-color:teal">
+    <div class="ui left demo vertical inverted sidebar labeled icon menu"  style="background-color:teal">
         <a class="item">
           <i class="home icon"></i>
           Home
@@ -42,7 +43,7 @@
   <div class="pusher">
 
       <div class="ui sticky">
-    <div class="ui inverted vertical center aligned segment" style="background-color:#380B61">
+    <div class="ui inverted vertical center aligned segment"  style="background-color:#380B61">
 
       <div class="ui container">
         <div class="ui large secondary inverted menu">
@@ -52,7 +53,7 @@
           <a class="active item">Home</a>
           <a class="item">Work</a>
 
-          <div class="left item">
+          <div class="right item">
             <a class="ui inverted button" id="usidebar">Sidebar</a>
             <a class="ui inverted button" id="testbutton">Modal</a>
           </div>
@@ -62,7 +63,7 @@
       </br>
       <div class="ui text container">
         <h1 class="ui inverted header">
-          سمنتیک یوآ
+          سمانتیک یوآ
         </h1>
         <h2>Do whatever you want!</h2>
 
@@ -80,12 +81,12 @@
         </div>
       </br>
 
-      <div class="ui breadcrumb" style="float:left">
-          <a class="active section" style="color:gray">سمنتیک یوآ</a>
-          <i class="left arrow icon divider" style="color:white"></i>
-          <a class="section" style="color:gray">اچ تی ام ال</a>
+      <div class="ui breadcrumb" style="float:right">
+          <a class="section" style="color:gray">خانه</a>
           <i class="left angle icon divider" style="color:white"></i>
-          <div class="section">خانه</div>
+          <a class="active section" style="color:gray">اچ تی ام ال</a>
+          <i class="left arrow icon divider" style="color:white"></i>
+          <div class="active section">سمنتیک یوآ</div>
       </div>
     </br>
       
@@ -112,7 +113,7 @@
     <div class="ui vertical segment">
       <div class="ui middle aligned grid container">
         <div class="row">
-          <div class="eight wide right floated column">
+          <div class="eight wide right floated column" >
 
 
             <div class="ui raised segment">
@@ -131,11 +132,11 @@
 
           <div class="ui info message">
               <i class="close icon"></i>
-              <div class="header">
-              توجه!
-              </div>
+              <div class="header">توجه</div>
+          
               <ul class="list">
-                <li>برای اطلاعات بیشتر <b><a href="https://semantic-ui.com">https://semantic-ui.com</a></b></li>
+                <li>برای اطلاعات بیشتر 
+                  <b><a href="https://semantic-ui.com">https://semantic-ui.com</a></b></li>
               
               </ul>
             </div>
@@ -150,13 +151,13 @@
 
 
 
-          <div class="six wide left floated column">
+          <div class="six wide right floated column">
 
             <form class="ui large form">
               <div class="ui stacked segment">
                 
                   <div class="row">
-                  <span style="float:left">زن
+                  <span style="float:left">مرد
                       <div class="ui checkbox">
                           <input type="checkbox">
                           <label></label>
@@ -166,7 +167,7 @@
                         <img class="ui tiny circular left floated image" src="images/molly.png">
                         
 
-                  <span style="float:right">مرد
+                  <span style="float:right">زن
                   
                       <div class="ui checkbox">
                           <input type="checkbox">
@@ -183,11 +184,15 @@
                            
                 
                               <div class="field">
+                                <div class="ui left icon input">
                                <input placeholder="First Name" type="text">
                             </div>
+                          </div>
                             <div class="field">
-                             <input placeholder="Last Name" type="text">
+                              <div class="ui left icon input">
+                              <input placeholder="Last Name" type="text">
                             </div>
+                          </div>
                         
                                
                             
@@ -196,7 +201,7 @@
                       
                                 <div class="ui fluid search selection dropdown" id="select">
                                   <input name="country" value="sv" type="hidden">
-                                  <i class="dropdown icon"></i>
+                                  <i class="ui left dropdown icon"></i>
                                   <div class="default text">Select Country</div>
                                   <div class="menu" id="srch">
                               <div class="item" data-value="us"><i class="us flag"></i>United states</div>
@@ -301,11 +306,11 @@
       
 
         </div>
-<div class="middle aligned content" style="margin-right: 60px">
-    <div class="header" style="font-size:30px;margin-left:40px">Description</div> 
+<div class="middle aligned content"  style="margin-right: 60px">
+    <div class="header" style="font-size:30px;margin-left:40px">سمانتیک یوآ</div> 
 
 
-    <div class="ui mini horizontal statistic" style="float:right">
+    <div class="ui mini horizontal statistic" style="float:left">
         <div class="value" style="color:teal">
           2,204
         </div>
@@ -317,9 +322,8 @@
     </br>
   </br>
     <div class="description" style="font-size:24px">
-      <p style="margin-left:40px">Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.
-          
-          According to the Semantic UI website, the goal of the framework is to empower designers and developers “by creating a language for sharing UI”. They do this by leveraging a semantic, descriptive language for its classes and naming conventions. Instead of using abbreviations, as other frameworks do, it utilizes real words in a manner closer to plain English.
+      <p>فریم ورک Semantic UI برای ساخت وب سایت های زیبا در کمترین زمان مورد استفده قرار می گیرد. این فریم ورک با بهرگیری از اصول زبان طبیعی کدنویسی، کدها را برای برنامه نویسان قابل خواندن و قابل درک می کند.</p>
+      <p style="margin-left:40px">سمانتیک یوآی یک چارچوب مدرن است که توسط Less و Jquery بوجود آمده است. این چارچوب دارای طراحی‌ای تخت اما بسیار زیبا, دقیق و سریع است. سمانتیک دارای ساختاری است که آن را نسبت به باقی چارچوب‌ها متفاوت کرده است.
       </p>
       
     
@@ -333,11 +337,11 @@
 
 
   </br>
-    <div class="ui list" style="margin-right:50px">
+    <div class="ui list"  style="margin-right:50px">
         <div class="item">
-            <i class="right triangle icon"></i>
+            <i class="left triangle icon"></i>
             <div class="content" style="margin-right:50px">
-              <div class="header" style="font-size:23px">Semantic UI Component Library</div>
+              <div class="header" style="font-size:23px">توضیحات</div>
             </br>
             
               <div class="description" style="font-size:20px"> <p>As most of us are probably aware, Bootstrap and Foundation are the current leaders among front-end development frameworks. But history has shown us that eventually something better will come along and in this case that might not be so far away.<p>
@@ -356,7 +360,7 @@
       </br>
     </br>
 
-          <table class="ui inverted teal table">
+          <table class="ui inverted teal table" >
             <thead>
               <tr><th>Definition Types</th>
               <th>Example</th>
@@ -417,18 +421,18 @@
 
 
 
-          <div class="ui inverted segment" style="background-color:#380B61; margin-left:100px; margin-right:50px;">
-              <div class="ui inverted accordion">
+          <div class="ui inverted segment"  style="background-color:#380B61; margin-left:100px; margin-right:50px;">
+              <div class="ui left inverted accordion">
                 <div class="active title" style="font-size: 20px">
                   <i class="dropdown icon"></i>
-                  what is semantic-ui?
+                  سمانتیک یوآ چیست؟
                 </div>
                 <div class="active content" style="font-size: 15px">
                   <p>Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.</p>
                 </div>
                 <div class="title" style="font-size: 20px">
                   <i class="dropdown icon"></i>
-                  What is a UI framework?
+                  فریم ورک یوآ چیست؟
                 </div>
                 <div class="content" style="font-size: 15px">
                   <p>Web User Interface Framework. The Web UI is an HTML-based application used to configure and manage the server appliance from a remote client. By extending the Web UI, you can build a consistent, reliable, and extensible UI. ... To present these items, the framework provides several page types.</p>
@@ -447,7 +451,7 @@
 
 
     
-  <div class="footer" style="background-color:white">
+  <div class="footer"  style="background-color:white">
 
       <div style="float:right; margin-right:20px"><div class="header">
          <b> Rating</b>
@@ -461,8 +465,8 @@
 
 
           <div class="ui violet top attached tabular menu" style="font-size: 20px">
-              <a class="item active" data-tab="first">Contact with:</a>
-              <a class="item" data-tab="second" style="color:black">location</a>
+              <a class="item active" data-tab="first">ارتباط با:</a>
+              <a class="item" data-tab="second" style="color:black">موقعیت</a>
               
             </div>
             <div class="ui bottom attached tab segment active" data-tab="first">

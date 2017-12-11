@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Semantic-Ui Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="lib/dist/semantic.rtl.min.css">
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/dist/semantic.min.js"></script>
+  <style>
+    
+
+  </style>
+</head>
+<body dir="rtl">
+
+
+<h1>راهنمای کاربری یولی</h1>
+
+<div class="ui inverted segment"  style="background-color:#380B61; margin-left:100px; margin-right:50px;">
+              <div class="ui left inverted accordion">
+                <div class="active title" style="font-size: 20px">
+                  <i class="dropdown icon"></i>
+                  سمانتیک یوآ چیست؟
+                </div>
+                <div class="active content" style="font-size: 15px">
+                  <p>Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.</p>
+                </div>
+                <div class="title" style="font-size: 20px">
+                  <i class="dropdown icon"></i>
+                  فریم ورک یوآ چیست؟
+                </div>
+                <div class="content" style="font-size: 15px">
+                  <p>Web User Interface Framework. The Web UI is an HTML-based application used to configure and manage the server appliance from a remote client. By extending the Web UI, you can build a consistent, reliable, and extensible UI. ... To present these items, the framework provides several page types.</p>
+                </div>
+              
+              </div>
+            </div>
+          </br>
+
+
+          <script>
+              $(document)
+                .ready(function() {
+                  $('.accordion')
+  .accordion({
+    selector: {
+      trigger: '.title .icon'
+    }
+  })
+;
+</script>
+            
+        </body>
+        
+        </html>
