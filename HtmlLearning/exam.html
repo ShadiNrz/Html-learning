@@ -2,55 +2,87 @@
 <html lang="en">
 
 <head>
-  <title>Semantic-Ui Example</title>
+  <title>Exam Test</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link rel="stylesheet" type="text/css" href="lib/dist/semantic.rtl.min.css">
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="lib/dist/semantic.min.js"></script>
   <style>
+   @font-face {
+    font-family: 'firstfont';
+    src: url(lib/facefont/IRANSansWeb.woff),
+    url(lib/facefont/IRANSansWeb.woff2);
     
+}
+
+
+body {
+  margin-top: 40px;
+  direction: rtl;
+
+} 
 
   </style>
 </head>
-<body dir="rtl">
+<body>
+  <h1 style="margin-top: 20px; margin-right:60px;font-family:firstfont">راهنمای کاربری یولی:</h1>
+    <div class="ui piled segment" style="margin-top:60px; margin-right:20px; margin-left:20px">
 
 
-<h1>راهنمای کاربری یولی</h1>
+<h3  style="font-family: firstfont; margin-right:20px">راهنمای یولی برای مدیریت شغل</h3>
 
-<div class="ui inverted segment"  style="background-color:#380B61; margin-left:100px; margin-right:50px;">
-              <div class="ui left inverted accordion">
-                <div class="active title" style="font-size: 20px">
-                  <i class="dropdown icon"></i>
-                  سمانتیک یوآ چیست؟
+<div style="margin-right:50px; margin-left:50px;">
+              <div class="ui styled accordion" style="background-color:#ddd;font-family:firstfont;width:90%;">
+                <div class="title" style="font-size: 20px; color:  #196f3d ; font-family:firstfont">
+                  <i class="dropdown icon" style="font-size:22px"></i>
+                  <i class="add user icon"></i>عضویت
                 </div>
-                <div class="active content" style="font-size: 15px">
-                  <p>Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.</p>
+              
+                <div class="content ui segment" style="font-size: 15px;">
+                  <p style="color:black">nothing</p>
                 </div>
-                <div class="title" style="font-size: 20px">
+                <div class="title" style="font-size: 20px; color: #196f3d ; font-family:firstfont">
                   <i class="dropdown icon"></i>
-                  فریم ورک یوآ چیست؟
+                  <i class="write icon"></i> ساخت شغل
                 </div>
                 <div class="content" style="font-size: 15px">
-                  <p>Web User Interface Framework. The Web UI is an HTML-based application used to configure and manage the server appliance from a remote client. By extending the Web UI, you can build a consistent, reliable, and extensible UI. ... To present these items, the framework provides several page types.</p>
+                  <p style="color:black">nothing</p>
                 </div>
+
+                <div class="title" style="font-size: 20px; color: #196f3d ; font-family:firstfont">
+                    <i class="dropdown icon"></i>
+                    <i class="edit icon"></i> ساخت منو برای رستوران
+                  </div>
+                  <div class="content" style="font-size: 15px">
+                    <p style="color:black">nothing</p>
+                  </div>
+
+                  <div class="title" style="font-size: 20px; color: #196f3d ; font-family:firstfont">
+                      <i class="dropdown icon"></i>
+                      <i class="configure icon"></i>مدیریت سفارشات
+                    </div>
+                    <div class="content" style="font-size: 15px">
+                      <p style="color:black">nothing</p>
+                    </div>
               
               </div>
             </div>
           </br>
 
+        </br>
+
 
           <script>
               $(document)
                 .ready(function() {
-                  $('.accordion')
-  .accordion({
+                  $('.accordion').accordion({
     selector: {
       trigger: '.title .icon'
     }
   })
 ;
+                });
 </script>
             
         </body>
