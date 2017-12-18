@@ -50,8 +50,8 @@ router.post("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);
 });
-router.post("/kendohtml.html", (req, res) => {
-    var file = path.join(__dirname + '/../HtmlLearning/kendohtml.html');
+router.post("/kendohome.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendohome.html');
     res.sendFile(file);
 });
 router.get("/get/jsonData", (req, res) => {
