@@ -102,6 +102,11 @@ router.post("/test.html", (req, res) => {
 
 });
 
+router.post("/kendohtml.html", (req, res) => {
+    var file = path.join(__dirname+'/../HtmlLearning/kendohtml.html')
+    res.sendFile(file);
+});
+
 router.get("/get/jsonData", (req, res) => {
 
     res.set("Content-Type", "application/json");
