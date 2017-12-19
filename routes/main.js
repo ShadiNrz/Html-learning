@@ -50,11 +50,14 @@ router.get("/kendohome.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendohome.html');
     res.sendFile(file);
 });
+router.get("/kendobutton.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendobutton.html');
+    res.sendFile(file);
+});
 router.post("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);
 });
-
 router.get("/get/jsonData", (req, res) => {
     res.set("Content-Type", "application/json");
     res.send({
