@@ -92,7 +92,10 @@ router.get("/exam.html", (req, res) => {
     res.sendFile(file)
 
 });
-
+router.get("/kendohome.html", (req, res) => {
+    var file = path.join(__dirname+'/../HtmlLearning/kendohome.html')
+    res.sendFile(file);
+});
 
 router.post("/test.html", (req, res) => {
 
@@ -102,10 +105,7 @@ router.post("/test.html", (req, res) => {
 
 });
 
-router.post("/kendohome.html", (req, res) => {
-    var file = path.join(__dirname+'/../HtmlLearning/kendohome.html')
-    res.sendFile(file);
-});
+
 
 router.get("/get/jsonData", (req, res) => {
 
