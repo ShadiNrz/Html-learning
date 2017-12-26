@@ -102,6 +102,11 @@ router.get("/kendobutton.html", (req, res) => {
     res.sendFile(file);
 });
 
+router.get("/panelbarkendo.html", (req, res) => {
+    var file = path.join(__dirname+'/../HtmlLearning/kendo-ui/panelbarkendo.html')
+    res.sendFile(file);
+});
+
 router.post("/test.html", (req, res) => {
 
     // res.set("Content-Type", "application/json");
