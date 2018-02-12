@@ -54,8 +54,12 @@ router.get("/kendobutton.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendobutton.html');
     res.sendFile(file);
 });
-router.get("/panelbarkendo.html", (req, res) => {
-    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/panelbarkendo.html');
+router.get("/kendopanelbar.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendopanelbar.html');
+    res.sendFile(file);
+});
+router.get("/kendomenu.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendomenu.html');
     res.sendFile(file);
 });
 router.post("/test.html", (req, res) => {

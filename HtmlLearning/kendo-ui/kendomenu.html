@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kendo button</title>
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.highContrast.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.highContrast.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+    <script src="lib/kendo/js/jquery.min.js"></script>
+    <script src="lib/kendo/js/kendo.all.min.js"></script>
+    <style>
+    body{
+    font-family: sans-serif;
+    margin-top:10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px solid ;
+    border-top-color: #f75940;
+    border-left-color: gray;
+    border-right-color: gray;
+    border-bottom-color: #f75940;
+    padding-bottom: 50%;  
+    height: 300px;
+    
+}
+#menu1{
+     max-width:400px;
+}
+#menu-image, #menu-direction ,#menu-vertical, #menu-animation, #menu-method ,#menu-event{
+    max-width:400px;
+    margin:0 auto;
+}
+</style>
+</head>
+<body>
+    <div style="margin-left:5%; float:left">
+    <div id="example1">
+        <h4> Basic: </h4>
+        <ul id="menu1">
+            <li> item 1
+                <ul>
+                    <li> item 1.1
+                        <ul>
+                           <li> item 1.1.1</li>
+                           <li> item 1.1.2</li>
+                           <li> item 1.1.3 </li>
+                        </ul>
+                    </li>
+                    <li>
+                        item 1.2
+                        <ul>
+                            <li> item 1.2.1</li>
+                            <li> item 1.2.2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+            item2
+            <ul>
+                <li>
+                    <div style="width:150px; padding:25px">
+                        <h3 style="margin-left:5%">template</h3>
+                        <ol>
+                            <li>one</li>
+                            <li>two</li>
+                            <li>three</li>
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+            </li>
+            <li>
+                item3
+            </li>
+            <li disabled="disabled">
+                item4
+            </li>
+        </ul>
+    </div>
+    <br>
+
+    <div id="example2">
+        <h4>With image: </h4>
+        
+        <ul id="menu-image"></ul>
+    </div>
+    <br>
+
+    <div id="example3">
+        <h4>Direction :</h4>
+        <ul id="menu-direction">
+            <li>
+                item1
+                <ul>
+                <li>item 1.1</li>
+                <li>item 1.2</li>
+                <li>item 1.3</li>
+                <li>item 1.4</li>
+            </ul>
+            </li>
+            <li>
+                item2
+                <ul>
+                    <li>item 2.1</li>
+                    <li> item 2.2</li>
+                    <li> item 2.3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br>
+    
+    <div id="example4">
+        <h4>Verical menu:</h4>
+        <ul id="menu-vertical">
+            <li>
+                item 1
+                <ul>
+                    <li>item 1.1</li>
+                    <li>item 1.2</li>
+                    <li>item 1.3</li>
+                    <li>item 1.4</li>
+                </ul>
+            </li>
+            <li>
+                item 2
+                <ul>
+                    <li>item 2.1</li>
+                    <li>item 2.2</li>
+                    <li>item 2.3</li>
+                    <li>item 2.4</li>
+                </ul>
+            </li>
+            <li>
+                item 3
+                <ul>
+                    <li>item 3.1</li>
+                </ul>
+            </li>
+            <li>
+                item 4
+                
+            </li>
+
+        </ul>
+
+
+    </div>
+    <br>
+
+    <div id="example5">
+        <h4>Animation:</h4>
+        <ul id="menu-animation">
+            
+            <li>
+                item 1
+                <ul>
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
+                </ul>
+            </li>
+            <li>
+                item2
+                <ul>
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
+                    <li>fourth</li>
+                </ul>
+            </li>
+            <li>
+                item 3
+            </li>
+            
+        </ul>
+    </div>
+    <br>
+
+    <div id="example6">
+        <h4>Method (insertBefore): </h4>
+        <ul id="menu-method">
+            <li>
+                item 3
+                <ul>
+                    <li>item 3.1</li>
+                    <li>item 3.2</li>
+                </ul>
+            </li>
+            <li>
+                item 4
+                <ul>
+                    <li>item 4.1</li>
+                    <li>item 4.2</li>
+                    <li>item 4.3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br>
+
+
+    <div id="example7">
+        <h4>Event(close):</h4>
+        <ul id="menu-event">
+            <li>
+                item 1
+                <ul>
+                    <li>item 1.1</li>
+                    <li>item 1.2</li>
+                </ul>
+            </li>
+            <li>
+                item 2
+                <ul>
+                    <li>item 2.1</li>
+                    <li>item 2.2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    </div>
+
+
+    <div class="demo-section k-rtl" id="example8" style="float:right; margin-right:3%">
+        <h4>RTL menu:</h4>
+        <ul id="menu-rtl">
+            <li>
+                item 1
+                <ul>
+                    <li>item 1.1</li>
+                    <li>item 1.2</li>
+                    <li>item 1.3</li>
+                </ul>
+            </li>
+            <li>
+                item 2
+                <ul>
+                    <li>item 2.1</li>
+                    <li>item 2.2</li>
+                    <li>item 2.3</li>
+                </ul>
+            </li>
+            <li>
+                item 3
+            </li>
+            <li disabled="disabled">
+                item 4
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+        $("#menu1").kendoMenu();
+
+        $("#menu-rtl").kendoMenu();
+    });
+    $("#menu-image").kendoMenu({
+        dataSource:[
+            {
+                text:"female" ,imageUrl:"images/molly2.png",
+                items:[
+                    {
+                        text:"top news"
+                    },
+                    {
+                        text:"oldest news"
+                    }
+                   
+                ]
+                
+            },
+
+            {
+                text:"male" ,imageUrl:"images/matthew2.png",
+                items:[
+                    {
+                        text:"top news"
+                    },
+                    {
+                        text:"oldest news"
+                    }
+                ]
+            }
+
+        ]
+    });
+
+    $("#menu-direction").kendoMenu({
+        direction:"left"
+    });
+
+    $("#menu-vertical").kendoMenu({
+        orientation: "vertical"
+
+    });
+
+    $("#menu-animation").kendoMenu({
+        animation: {
+            open:{
+                effects: "slideIn:down",
+                duration: 600
+            }
+        }
+    });
+
+    $("#menu-method").kendoMenu();
+        var menu =$("#menu-method").data("kendoMenu");
+        menu.insertBefore(
+            [{
+                text:"item 1"
+            },
+            {
+                text:"item 2",
+                items:[{
+                    text:"item 2.1"
+                },
+                {
+                    text:"item 2.2"
+                
+                }]
+            
+            }],
+            "li:first-child"
+        );
+
+
+        $("#menu-event").kendoMenu();
+        var menu=$("#menu-event").data("kendoMenu");
+        menu.bind("close", function(e){
+            console.log("filter menu closed");
+        });
+
+
+       
+    
+</script>
+
+
+
+</body>
+</html>
