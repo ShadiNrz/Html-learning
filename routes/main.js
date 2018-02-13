@@ -62,6 +62,10 @@ router.get("/kendomenu.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendomenu.html');
     res.sendFile(file);
 });
+router.get("/kendotabstrip.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendotabstrip.html');
+    res.sendFile(file);
+});
 router.post("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);
