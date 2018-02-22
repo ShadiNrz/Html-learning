@@ -66,6 +66,14 @@ router.get("/kendotabstrip.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendotabstrip.html');
     res.sendFile(file);
 });
+router.get("/kendotoolbar.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendotoolbar.html');
+    res.sendFile(file);
+});
+router.get("/kendotreeview.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendotreeview.html');
+    res.sendFile(file);
+});
 router.post("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);

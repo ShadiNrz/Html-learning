@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kendo ToolBar</title>
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.silver.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.silver.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+    <script src="lib/kendo/js/jquery.min.js"></script>
+    <script src="lib/kendo/js/kendo.all.min.js"></script>
+    <style>
+    body{
+    font-family: sans-serif;
+    margin-top:10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px solid ;
+    border-top-color: #f75940;
+    border-left-color: gray;
+    border-right-color: gray;
+    border-bottom-color: #f75940;
+    padding-bottom: 50%;  
+    height: auto;
+    
+}
+#basic, #example2, #example3{
+    margin-top:10%;
+    margin-left:5%;
+    width:500px
+}
+#example4{
+    margin-top:10%;
+    margin-right:5%;
+    width:400px;
+}
+
+.red{
+    background-color: red;
+}
+</style>
+</head>
+<body>
+    <div style="float:left">
+    <div id="basic">
+    <div id="example">
+        <h4>Basic:</h4>
+        <div id="toolbar">
+
+        </div>
+    </div>
+
+    </div>
+    <br>
+    
+    <div id="example2">
+        <h4>Method(Add):</h4>
+        <div id="method">
+            
+        </div>
+    </div>
+    <br>
+
+    <div id="example3">
+        <h4>Event(Toggle):</h4>
+        <div id="event"></div>
+    </div>
+    </div>
+
+
+    <div style="float:right">
+        <div id="example4" class="k-rtl">
+            <h4 style="margin-right:8%; margin-top:10%">Rtl Toolbar:</h4>
+            <div id="rtl" style="margin-right:5%"></div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#toolbar").kendoToolBar({
+                items:[
+                    {type:"button", text:"button"},
+                    {type:"splitButton", text:"splitButton", menuButtons:[{text:"insert above", icon:"insert-up"},
+                    {text:"insert blow", icon:"insert-down"}
+                ]},
+                {type:"separator"},
+                {template:"<label for='dropdown'>Format:</label>"},
+                {template:"<input id='dropdown' style='width:80px;'/>", overflow:"never"},
+                {type:"separator"},
+                {type:"buttonGroup",buttons:[
+                    {icon:"align-left", text:"left"},
+                    {icon:"align-right" , text:"right"}
+                ]},
+                {type:"bottonGroup", buttons:[
+                    {icon:"bold", text:"bold"},
+                    {icon:"italic" , text:"italic"}
+                ]},
+                {type:"button",  text:"action", overflow:"always"},
+                {type:"button", text:"another action"}
+                ]
+            });
+            $("#dropdown").kendoDropDownList({
+                optaionLabel:"paragraph",
+                dataTextField:"text",
+                dataValueField:"value",
+                dataSource:[
+                    {text:"first", value: 1},
+                    {text:"second", value: 2},
+                    {text:"third" , value: 3}
+                ]
+            });
+
+
+
+
+
+        });
+
+
+        $("#method").kendoToolBar({
+            items:[
+                {type:"button", text:"item", attributes:{"class":"red"}},
+                {type:"button", text:"female", imageUrl: "images/molly2.png"}
+            ]
+        });
+        var toolbar=$("#method").data("kendoToolBar");
+        toolbar.add({
+            type:"buttonGroup",
+            buttons:[
+                {text:"Add one", togglable: true, selected: true},
+                {text:"Add two", icon:"error"},
+                {text:"Add three"},
+                
+            ]
+        
+        });
+        $("#event").kendoToolBar({
+            items:[
+                {type:"button", text:"item one", togglable:true},
+                {type:"button", text:"item two", togglable:true},
+                {type:"button" ,text:"item three", togglable:true}
+            ]
+        });
+        var toolbar=$("#event").data("kendoToolBar");
+        toolbar.bind("toggle", function(e){
+            alert("Kendo toggle event for Toolbar!");
+        });
+
+
+
+        $("#rtl").kendoToolBar({
+            items:[
+                    {type:"button", text:"button"},
+                    {type:"splitButton", text:"splitButton", menuButtons:[{text:"insert above", icon:"insert-up"},
+                    {text:"insert blow", icon:"insert-down"}
+                ]},
+                {type:"separator"},
+                {template:"<label for='dropdown'>Format:</label>"},
+                {template:"<input id='dropdown' style='width:80px;'/>", overflow:"never"},
+                {type:"separator"},
+                {type:"buttonGroup",buttons:[
+                    {icon:"align-left", text:"left"},
+                    {icon:"align-right" , text:"right"}
+                ]},
+                {type:"bottonGroup", buttons:[
+                    {icon:"bold", text:"bold"},
+                    {icon:"italic" , text:"italic"}
+                ]},
+                {type:"button",  text:"action", overflow:"always"},
+                {type:"button", text:"another action"}
+                ]
+            });
+            $("#dropdown").kendoDropDownList({
+                optaionLabel:"paragraph",
+                dataTextField:"text",
+                dataValueField:"value",
+                dataSource:[
+                    {text:"first", value: 1},
+                    {text:"second", value: 2},
+                    {text:"third" , value: 3}
+                ]
+        });
+
+
+    </script>
+
+</body>
+</html>

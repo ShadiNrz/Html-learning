@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kendo TreeView</title>
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.flat.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.flat.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+    <script src="lib/kendo/js/jquery.min.js"></script>
+    <script src="lib/kendo/js/kendo.all.min.js"></script>
+    <style>
+    body{
+    font-family: sans-serif;
+    margin-top:10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px solid ;
+    border-top-color: #f75940;
+    border-left-color: gray;
+    border-right-color: gray;
+    border-bottom-color: #f75940;
+    padding-bottom: 50%;  
+    height: 950px;
+    
+}
+.k-sprite {
+    background-image: url("http://demos.kendoui.com/content/web/treeview/coloricons-sprite.png");
+}
+
+#example1, #example2, #example3, #example4, #example5, #example6, #example7{
+    margin-left:20%;
+    margin-top:30%;
+    width:210px;
+    
+}
+#example8{
+   
+    margin-top:40%;
+    width:210px;
+    
+}
+
+.rootfolder { background-position: 0 0; }
+.folder { background-position: 0 -16px; }
+.pdf { background-position: 0 -32px; }
+.html { background-position: 0 -48px; }
+.image { background-position: 0 -64px; }
+
+
+
+
+</style>
+</head>
+<body>
+    <div style="float:left">
+        <div id="example1" class="demo-section k-content">
+            <h4>Basic:</h4>
+            <ul id="basic">
+                <li data-expanded="true">
+                    <span class="k-sprite folder"></span>
+                    My TreeView
+                    <ul>
+                        <li data-expanded="true">
+                            <span class="k-sprite folder"></span>
+                            images
+                            <ul>
+                                <li><span class="k-sprite image"></span>first.png</li>
+                                <li><span class="k-sprite image"></span>second.png</li>
+                                <li><span class="k-sprite image"></span>third.png</li>
+                            </ul>
+                        </li>
+                        <li data-expanded="true">
+                            <span class="k-sprite folder"></span>
+                            pdf
+                            <ul>
+                                    <li><span class="k-sprite pdf"></span>one.pdf</li>
+                                    <li><span class="k-sprite pdf"></span>two.pdf</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+
+
+
+        <div id="example2">
+            <h4>Drag & drop:</h4>
+            <div id="drag">
+
+            </div>
+        </div>
+
+        <br>
+
+        <div id="example3">
+            <h4>Animation:</h4>
+            <div id="animation"></div>
+        </div>
+        <br>
+        
+        <div id="example4">
+            <h4>With images:</h4>
+            <div id="image"></div>
+        </div>
+        <br>
+        <div id="example5">
+            <h4>Checkbox:</h4>
+            <div id="checkbox"></div>
+        </div>
+
+        <br>
+        <div id="example6">
+            <h4>Method(collapse):</h4>
+            <div id="method"></div>
+        </div>
+        <br>
+
+        <div id="example7">
+            <h4>Event(collapse):</h4>
+            <div id="event"></div>
+        </div>
+
+
+
+    </div>
+
+
+    <div style="float:right">
+        <div id="example8" class="k-rtl">
+            <h4  style="margin-right:20%">Rtl TreeView:</h4>
+            <ul id="rtl" style="margin-right:20%">
+                <li data-expanded="true">
+                    <span class="k-sprite folder"></span>
+                    My TreeView
+                    <ul>
+                        <li data-expanded="true">
+                            <span class="k-sprite folder"></span>
+                            images
+                            <ul>
+                                <li><span class="k-sprite image"></span>first.png</li>
+                                <li><span class="k-sprite image"></span>second.png</li>
+                                <li><span class="k-sprite image"></span>third.png</li>
+                            </ul>
+                        </li>
+                        <li data-expanded="true">
+                            <span class="k-sprite folder"></span>
+                            pdf
+                            <ul>
+                                    <li><span class="k-sprite pdf"></span>one.pdf</li>
+                                    <li><span class="k-sprite pdf"></span>two.pdf</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#basic").kendoTreeView();
+
+            $("#rtl").kendoTreeView();
+
+        });
+
+
+        $("#drag").kendoTreeView({
+            dragAndDrop: true,
+            dataSource:[
+                {text:"Sofas", expanded:true, items:[
+                    {text:"leather sofa"},
+                    {text:"fabric sofa"},
+                    {tex:"corner sofa"},
+                    {text:"recliner sofa"}
+                ]},
+                {text:"beds", items:[
+                    {text:"platform"},
+                    {text:"headboard"},
+                    {text:"sleigh"},
+                    {text:"four poster"},
+                    {text:"canopy"}
+
+                ]}
+            ]
+        });
+
+        $("#animation").kendoTreeView({
+            animation:{
+                expand:{
+                    duration:500,
+                    effects:"fadeIn"
+                },
+                collapse:{duration:500,}
+            },
+            dataSource:[
+                {text:"item one", items:[
+                    {text:"item 1.1"},
+                    {text:"item 1.2"}
+                   
+                ]}
+            ]
+        });
+
+
+        $("#image").kendoTreeView({
+            dataSource:[{
+                text:"mail", imageUrl:"images/mail.png", items:[
+                    {text:"search",imageUrl:"images/search.png"},
+                    {text:"draft", imageUrl:"images/edit.png"},
+                    {text:"setting", imageUrl:"images/settings.png"}
+                ]
+            }]
+        });
+
+        $("#checkbox").kendoTreeView({
+            checkboxes: {
+                checkChildren: true
+            },
+
+            
+            dataSource:[{
+                id: 1, text: "My Documents", expanded: true, spriteCssClass: "rootfolder", items: [
+                    {
+                        id: 2, text: "Kendo UI Project", expanded: true, spriteCssClass: "folder", items: [
+                            { id: 3, text: "about.html", spriteCssClass: "html" },
+                            { id: 4, text: "index.html", spriteCssClass: "html" },
+                            { id: 5, text: "image.png", spriteCssClass: "image" }
+                        ]
+                    },
+                    {
+                        id: 6, text: "New Web Site", expanded: true, spriteCssClass: "folder", items: [
+                            { id: 7, text: "image.jpg", spriteCssClass: "image" },
+                            { id: 8, text: "Research.pdf", spriteCssClass: "pdf" }
+                        ]
+                    }
+                    ]
+            }]
+        });
+
+
+        $("#method").kendoTreeView({
+         dataSource: [
+            { text: "item one", expanded: true, items: [
+            { text: "item 1.1" },
+            { text: "item 1.2" },
+            { text: "item 1.3" }
+            ] },
+            { text: "item two", expanded: true, items: [
+            { text: "item 2.1" },
+            { text: "item 2.2" }
+            ] }
+           ]
+          });
+
+       var treeview = $("#method").data("kendoTreeView"); 
+
+       treeview.collapse(treeview.findByText("item one"));
+
+
+       $("#event").kendoTreeView({
+           dataSource:[
+               {text:"item one", items:[
+                   {text:"item 1.1"},
+                   {text:"item 1.2"},
+                   {text:"item 1.3"}
+               ]}
+        ],
+        collapse: function(e){
+            console.log("collapsing", e.node);
+            alert("collapse event of kendotreeview!");
+        }
+       });
+
+
+        
+
+
+
+    </script>
+
+</body>
+</html>
