@@ -78,6 +78,10 @@ router.get("/kendowindow.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendowindow.html');
     res.sendFile(file);
 });
+router.get("/kendotooltip.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendotooltip.html');
+    res.sendFile(file);
+});
 router.post("/test.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/test.html');
     res.sendFile(file);

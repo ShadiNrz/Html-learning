@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kendo Tooltip</title>
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.BlueOpal.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.BlueOpal.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+    <script src="lib/kendo/js/jquery.min.js"></script>
+    <script src="lib/kendo/js/kendo.all.min.js"></script>
+
+</head>
+<body>
+        
+
+ <style>
+    body{
+    font-family: sans-serif;
+    margin-top:10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px solid ;
+    border-top-color: #4A235A;
+    border-left-color: #D0D3D4;
+    border-right-color: #D0D3D4;
+    border-bottom-color: #4A235A;
+    padding-bottom: 50%;  
+    height: 250px;
+    
+}
+
+#example1, #example2, #example3,#example4, #example5{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.demo-section.k-content,
+                html.k-material .demo-section.k-content {
+                    overflow: hidden;
+                    padding: 0;
+                    border: 0;
+                    box-shadow: none;
+                    height:400px;
+                }
+                
+                #pic {
+                    position: relative;
+                    width: 692px;
+                    height: 480px;
+                    margin: 0 auto;
+                    background: url('http://localhost:8080/images/friends-main.jpg') no-repeat 0 0;
+                    float:left;
+                }
+
+                #pic span {
+                    cursor: pointer;
+                    position: absolute;
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    background-color:lightblue;
+                    -moz-border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    border-radius: 30px;
+                    border: 0;
+                    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+                    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+                    box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+                   
+                }
+
+                #pic span:hover {
+                    -moz-box-shadow: 0 0 0 15px rgba(0,0,0,0.5);
+                    -webkit-box-shadow: 0 0 0 15px rgba(0,0,0,0.5);
+                    box-shadow: 0 0 0 15px rgba(0,0,0,0.5);
+                    -moz-transition:  -moz-box-shadow .3s;
+                    -webkit-transition:  -webkit-box-shadow .3s;
+                    transition:  box-shadow .3s;
+                }
+
+                #joey { top: 206px; left: 531px; }
+                #pheobe { top: 266px; left: 654px; }
+                #rachel { top: 207px; left: 182px; }
+                #monica { top: 214px; left: 448px; }
+                #chandler { top: 152px; left: 98px; }
+                #ross { top: 183px; left: 352px; }
+
+               
+                #joey:hover,
+                #pheobe:hover,
+                #monica:hover,
+                #ross:hover,
+                #rachel:hover,
+                #chandler:hover { z-index: 10; }
+
+            </style>
+            <body>
+        <div id="example1">
+            <h4>Basic:</h4>
+                <div class="demo-section k-content wide">
+                    <div id="pic">
+                        <span href="#" title="Rachel" id="rachel"></span>
+                        <span href="#" title="Pheobe" id="pheobe"></span>
+                        <span href="#" title="Chandler" id="chandler"></span>
+                        <span href="#" title="Joey" id="joey"></span>
+                        <span href="#" title="Ross" id="ross"></span>
+                        <span href="#" title="Monica" id="monica"></span>
+    
+                       
+                      
+                    </div>
+                </div>
+    </div>
+    
+    <div id="example2">
+        <h4>Method:</h4>
+        <div id="method">
+        <div><span id="span" title="Best Tv series ever!" style="cursor: pointer">Friends Tv series</span></div>
+        <br>
+        <button id="button" class="k-button">Click it to hide tooltip!</button>
+        </div>
+    </div>
+
+    <div id="example3">
+        <h4>Event:</h4>
+        <div id="event">
+            <span id="span2" style="cursor: pointer">One of many pics of friends!</span>
+            
+
+        </div>
+    </div>
+
+
+
+                <script>
+                    $(document).ready(function() {
+                        var tooltip = $("#pic").kendoTooltip({
+                            filter: "span",
+                            width: 100,
+                            position: "top",
+                        }).data("kendoTooltip");
+    
+                        tooltip.show($("#pheobe"));
+
+
+
+                        var tooltip2 = $("#method").kendoTooltip({
+                        filter: "span",
+                        autoHide: false,
+                        position: "right",
+                        width:200
+                        }).data("kendoTooltip");
+                        tooltip2.show($("#span"));
+
+                       $("#button").click(function() {
+                       tooltip2.hide();
+                       
+                       });
+
+
+
+                    
+
+                       $("#span2").kendoTooltip({
+                           content:{
+                               url:"http://localhost:8080/images/friends.jpg"
+                           },
+                          width: 320,
+                          height: 180,
+                          contentLoad:function(){
+                              console.log("content is load");
+                          },
+                          show:function(){
+                              console.log("tooltip is shown");
+                          }
+
+                       });
+                    });
+                </script>
+
+
+</body>
+</html>
