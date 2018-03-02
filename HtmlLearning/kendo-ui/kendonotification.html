@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kendo Notification</title>
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.Default.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.Default.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+    <script src="lib/kendo/js/jquery.min.js"></script>
+    <script src="lib/kendo/js/kendo.all.min.js"></script>
+
+</head>
+
+        
+
+ <style>
+    body{
+    font-family: sans-serif;
+    margin-top:10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px solid ;
+    border-top-color: #4A235A;
+    border-left-color: #D0D3D4;
+    border-right-color: #D0D3D4;
+    border-bottom-color: #4A235A;
+    padding-bottom: 50%;  
+    height: 50px;
+    
+}
+
+#example1, #example2, #example3{
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#button1, #button2, #button4 , #button5, #button6, #button7{
+    width:150px;
+}
+#button3{
+    width:200px;
+}
+
+</style>
+<body>
+   
+    <div style="float:left; margin-top:10%"> 
+        <div id="example1">
+            <h4>Basic:</h4>
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <p>
+            <button id="button1" class="k-button">Click it !</button>
+            <br>
+            <br>
+            <button id="button2" class="k-button">Click it!</button>
+            
+        </p>
+    </div>
+    <br>
+    <div id="example2">
+        <h4>Method:</h4>
+        <span id="noti3"></span>
+        <button id="button3" class="k-button">Show text method!</button>
+
+    </div>
+    <br>
+    <div id="example3">
+        <h4>Event:</h4>
+        <span id="noti4"></span>
+        <div>
+        <button id="button4" class="k-button">Click it to show!</button>
+        </div>
+        <br>
+        <button id="button5" class="k-button">Click it to hide!</button>
+        
+    </div>
+
+
+
+   
+    </div>
+
+    <div id="example4" class="k-rtl" style="margin-right:10%; margin-top:12%">
+        <h4>Rtl :</h4> 
+        <span id="span3"></span>
+        <span id="span4"></span>
+        <p>
+            <button id="button6" class="k-button">Click it !</button>
+            <br>
+            <br>
+            <button id="button7" class="k-button">Click it!</button>
+            
+        </p>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            var noti1=$("#span1").kendoNotification().data("kendoNotification");
+            var noti2=$("#span2").kendoNotification({
+                width:200,
+            
+                position:{
+                    bottom:350,
+                    left:450,
+        
+                }
+
+            }).data("kendoNotification");
+
+            $("#button1").click(function(){
+                var d=new Date();
+                noti1.show(kendo.toString(d, 'HH:MM:ss.')+kendo.toString(d.getMilliseconds(), "000"), "error");
+            });
+            
+            $("#button2").click(function(){
+                noti2.warning(" Notification!");
+            });
+
+
+
+
+       
+       
+
+
+
+        function getNotificationMessage() {
+    return {
+        myMessage: "show text!"
+    }
+}
+
+var notificationWidget = $("#noti3").kendoNotification({
+    width:200,
+    stacking:"up",
+    autoHideAfter: 1000,
+    position:{
+        top:520,
+        left:500
+    },
+    templates: [{
+        type: "myAlert",
+        template: "<center>System alert: #= myMessage #</center>"
+    }]
+}).data("kendoNotification");
+$("#button3").click(function(){
+
+notificationWidget.show(getNotificationMessage(), "myAlert");
+
+});
+
+
+
+
+function onShow(e) {
+    var elementBeingShown = e.element;
+}
+function onHide(e) {
+    var elementBeingHidden = e.element;
+}
+
+$("#noti4").kendoNotification({
+    show: onShow,
+    hide: onHide,
+    width:300,
+    stacking:"right",
+    position:{
+        bottom:100,
+        left:400
+    }
+});
+$("#button4").click(function(){
+$("#noti4").getKendoNotification().show(" Shown Notification!");
+});
+
+$("#button5").click(function(){
+$("#noti4").getKendoNotification().hide();
+});
+
+
+var noti5=$("#span3").kendoNotification().data("kendoNotification");
+            var noti6=$("#span4").kendoNotification({
+                width:200,
+            
+                position:{
+                    bottom:400,
+                    left:750,
+        
+                }
+
+            }).data("kendoNotification");
+
+            $("#button6").click(function(){
+                var d=new Date();
+                noti5.show(kendo.toString(d, 'HH:MM:ss.')+kendo.toString(d.getMilliseconds(), "000"), "error");
+            });
+            
+            $("#button7").click(function(){
+                noti6.warning(" Notification!");
+            });
+
+
+
+
+
+});
+
+    </script>
+</body>
+</html>
