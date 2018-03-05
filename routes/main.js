@@ -14,6 +14,10 @@ router.get("/jQueryAjax.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/jQueryAjax.html');
     res.sendFile(file);
 });
+router.get("/index.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/index.html');
+    res.sendFile(file);
+});
 router.get("/jQuerySelector.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/jQuerySelector.html');
     res.sendFile(file);
@@ -84,6 +88,10 @@ router.get("/kendotooltip.html", (req, res) => {
 });
 router.get("/kendonotification.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendonotification.html');
+    res.sendFile(file);
+});
+router.get("/kendodatasource.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendodatasource.html');
     res.sendFile(file);
 });
 router.post("/test.html", (req, res) => {
