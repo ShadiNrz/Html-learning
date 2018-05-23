@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sample Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="lib/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/dist/semantic.rtl.min.css">
+
+  <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.uniform.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.uniform.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/dist/semantic.min.js"></script>
+
+  <script src="lib/kendo/js/kendo.dropdownlist.min.js"></script>
+  <script src="lib/kendo/js/kendo.multiselect.min.js"></script>
+  <script src="lib/kendo/js/kendo.all.min.js"></script>
+  
+  
+
+  <style>
+    @font-face {
+    font-family: firstfont;
+    src: url(lib/facefont/IRANSansWeb.woff),
+    url(lib/facefont/IRANSansWeb.woff2);
+    
+}
+body{
+  font-family: firstfont;
+  direction: rtl;
+ 
+}
+
+
+
+
+
+
+
+
+
+.ui.divider{
+  background-color:#ff5e3a ;
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+  padding:0.1% !important;
+}
+
+.bodi{
+  background-color: #f8f9f9;
+  font-family: firstfont;
+  height:100%;
+  direction: rtl;
+  color:black;
+  
+}
+
+
+  
+  
+
+
+.ui.menu .item>p {
+  font-size: 15px;
+
+}
+
+
+.k-icon{
+  margin-top:20% !important;
+  margin-bottom: 10%;
+  font-size: 25px;
+  color:#ffb619 !important;
+  margin-right: 5%;
+}
+
+.ui.grid>.column{
+margin-top:0 !important;
+padding-right: 0 !important;
+padding-top:0 !important;
+}
+
+.ui.grid{
+margin-right:0 !important;
+margin-top:0 !important;
+}
+
+.ui.secondary.vertical.pointing.menu{
+  margin-top:0 !important;
+  padding-top: 0 !important;
+  width:60% !important;
+  height:260% !important;
+  background-color:#f2f2f2 ;
+  border-bottom: 1px solid gray;
+}
+.ui.secondary.vertical.pointing.menu .item{
+  padding:8%;
+}
+
+.ui.secondary.vertical.pointing .active.item{
+  padding:5% !important;
+  color:#f2f2f2 !important;
+  
+}
+#pm{
+  color:black !important;
+  font-family: firstfont;
+  margin-right:5% ;
+  
+}
+.ui.accordion{
+  max-height:280px !important;
+}
+
+.ui.accordion .title~.content{
+  color:white !important;
+  font-family: firstfont;
+  margin-top:5% !important;
+  
+  
+}
+
+.visible.transition{
+  color:black !important;
+}
+a{
+  margin-right: 18% !important;
+  color:black !important;
+  cursor: pointer;
+}
+#npm{
+  margin-left:8% !important;
+  
+}
+.ui-accordion-content-active{
+  display:block !important;
+  }
+  .ui.dropdown>.text>.icon{
+    margin-left:-3px !important;
+  }
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  
+
+
+
+  
+<div class="ui inverted vertical segment" style="background-color:#272e4f;">
+
+  <img class="ui tiny circular left floated image" src="images/gpss.png" style="width:34px; margin-right:2%;">
+      
+        <p class="ui inverted header" style="font-family: firstfont; margin-top:0.6%">
+          سامانه مسیر یاب آریاپاد
+        </p>
+
+
+
+
+
+        <div class="ui inline dropdown" style="float:left; margin-top:-30px; margin-left:1%">
+            <div class="text">
+                <i class="user outline icon"></i> ادمین
+            </div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">
+                خروج
+              </div>
+             
+              </div>
+              </div>
+              
+      
+        </div>
+        <div class="bodi">
+        <div class="ui divider"></div>
+        <div class="ui grid">
+          <div class="two wide column">
+
+
+
+             
+            <div class="ui secondary vertical pointing menu ovarlay visible">
+                <div class="ui accordion">
+                    <div class="title">
+              
+            
+                <i class="k-icon k-i-globe-outline"></i> <p id="pm">
+                  نقشه<i class="dropdown icon"></i></p>
+               
+                
+            
+            
+              
+              </div>
+              <div class="content">
+                <a class="item"><p id="npm">مجموعه</p></a>
+                <hr>
+              </div>
+              
+              
+              <div class="title">
+                  <i class="k-icon k-i-gears k-i-cogs"></i><p id="pm">پنل مدیریت<i class="dropdown icon"></i></p>
+                
+              </div>
+              
+              <div class="content">
+                 <a class="item"> <p id="npm">کاربران</p>
+                </a>
+                 <hr>
+
+                  <a class="item">
+                    <p id="npm">دستگاه ها</p></a>
+                    <hr>
+                    
+
+                    <a class="item">
+                        <p id="npm">خودرو ها</p>
+                        </a>
+                        <hr>
+
+                        <a class="item">
+                            <p id="npm">تخصیص</p>
+                            </a>
+                            <hr>
+                </div>
+              
+              
+
+                <div class="title">
+                    <i class="k-icon k-i-paste-plain-text"></i> <p id="pm">
+                  گزارشات<i class="dropdown icon"></i></p>
+               
+                
+            
+            
+              
+              </div>
+              <div class="content">
+                <a class="item"><p id="npm">اخطار</p></a>
+                <hr>
+                <a class="item"><p id="npm">توقف</p></a>
+                <hr>
+                
+
+              </div>
+              
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+    
+      
+
+        
+
+
+
+
+       
+
+
+        
+        
+        
+        
+      
+    
+<script>
+  
+
+  $( ".ui.accordion" ).accordion({
+    collapsible:true,
+    active : 'none',
+    autoHeight: true,
+     navigation: true,
+     exclusive: false
+    });
+
+$('.ui.dropdown')
+  .dropdown()
+;
+</script>
+
+
+
+   
+    
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sample</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="lib/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/dist/semantic.rtl.min.css">
+
+  <link rel="stylesheet" href="lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.uniform.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.uniform.mobile.min.css">
+    <link rel="stylesheet" href="lib/kendo/styles/kendo.rtl.min.css">
+
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/dist/semantic.min.js"></script>
+
+  <script src="lib/kendo/js/kendo.dropdownlist.min.js"></script>
+  <script src="lib/kendo/js/kendo.multiselect.min.js"></script>
+  <script src="lib/kendo/js/kendo.all.min.js"></script>
+  
+  
+
+  <style>
+    @font-face {
+    font-family: firstfont;
+    src: url(lib/facefont/IRANSansWeb.woff),
+    url(lib/facefont/IRANSansWeb.woff2);
+    
+}
+
+.form{
+  margin-top:10%;
+  direction: rtl;
+  margin-right:2%;
+  
+}
+
+#head{
+background-color:rgba(73,0,106,1);
+padding:1.5%;
+
+
+}
+
+
+body{
+ font-family: firstfont;
+}
+
+
+#btn {
+  transition: .5s ease;
+  /*opacity: 0;*/
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image:hover  #img1{
+  opacity: 0.7;
+}
+
+.image:hover #btn {
+  opacity: 1;
+}
+
+
+.ui.form .field>label{
+  font-size:16px;
+}
+
+#p1{
+  font-size:20px;
+  margin-right:2%;
+}
+
+.ui.checkbox{
+ 
+  direction: ltr;
+}
+
+.column .checkbox>label{
+  font-size:16px;
+}
+
+#dropdownkendo{
+  margin-right:3%;
+  margin-top: 2%;
+}
+
+
+#drplabel{
+  margin-right:3%;
+  
+ 
+}
+
+
+.k-multiselect-wrap>.k-input {
+    font-style: normal;
+    opacity: 0.6;
+    color: gray;
+    font-size: 14px;
+    font-family: firstfont;
+    
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="form">
+<div class="ui centered violet card" style="width:70%; padding-bottom:20%;">
+    <div id="head"><center><p style="font-family: firstfont; color:white; font-size:30px">ایجاد کاربر</p></center></div>
+
+    <div class="extra content" >
+      <center>
+  <div class="ui image" style="margin-top:3%; width:22%" >
+    <img src="/images/white-image.jpg" id="img1">
+    <div id="btn">
+    <button class="ui violet button">
+        Add
+      </button></div>
+    
+  </div></center>
+ </div>
+
+
+  
+      <div class="ui form">
+            <div class="ten wide field">
+              <label >نام و نام خانوادگی</label>
+              <input placeholder="" type="text">
+  </div>
+
+  <div class="ten wide field">
+      <label> کد ملی </label>
+      <input placeholder="" type="text">
+</div>
+
+
+
+   <div class="ten wide field">
+      <label> جنسیت</label>
+    <div class="ui fluid selection dropdown" id="drp1">
+        <i class="dropdown icon" style="margin-right:90%"></i>
+        <input name="gender" type="hidden">
+        <div class="default text"></div>
+        <div class="menu">
+          <div class="item" data-value="1">زن</div>
+          <div class="item" data-value="0">مرد</div>
+        </div>
+       
+      </div>
+      </div>
+
+
+      
+<div class="ten wide field">
+    <label>تلفن همراه</label>
+    <input placeholder="" type="text">
+</div>
+
+
+<div class="ten wide field">
+    <label>آدرس</label>
+    <input placeholder="" type="text">
+</div>
+
+<div class="ten wide field">
+    <label>ایمیل</label>
+    <input placeholder="" type="text">
+</div>
+
+<div class="ten wide field">
+    <label>وضعیت</label>
+    <div class="ui fluid selection dropdown" id="drp2">
+        <i class="dropdown icon" style="margin-right:90%"></i>
+        <input name="gender" type="hidden">
+        <div class="default text"></div>
+        <div class="menu">
+          <div class="item" data-value="1">فعال</div>
+          <div class="item" data-value="0">غیر فعال</div>
+        </div>
+       
+      </div>
+
+</div>
+
+<div class="ten wide field">
+    <label>رمز عبور</label>
+    <input placeholder="" type="text">
+ 
+</div>
+
+
+<div class="ten wide field">
+    <label>تکرار رمز عبور</label>
+    <input placeholder="" type="text">
+ 
+</div>
+</div>
+<br>
+<br>
+<p id="p1"><b>نوع کاربر :</b><p>
+
+    <div class="ui three column grid">
+        <div class="column">
+            <div class="ui checkbox">
+                <input name="example" type="checkbox">
+                <label>دانش آموز </label>
+                
+              </div>
+              <br>
+              <br>
+
+              <div id="dropdownkendo" >            
+                
+                    <div class="k-rtl">
+                        <label id="drplabel">مدرسه <input id="drpkendo1" style="width:60%; margin-right:2%"/></label>
+                    </div>
+
+                    <br>
+                    <div class="ui raised segments" id="segment">
+                        <div class="ui segment">
+                          <p>نام مدرسه :</p>
+                        </div>
+                        <div class="ui segment">
+                          <p>تلفن مدرسه :</p>
+                        </div>
+                        <div class="ui segment">
+                          <p>آدرس مدرسه :</p>
+                        </div>
+                      </div>
+        </div>
+        <br>
+
+        <div id="dropdownkendo">            
+            <div>
+                <div class="k-rtl">
+                    <label id="drplabel">خودرو <input id="drpkendo2" style="width:60%; margin-right:2.6%"/></label>
+                </div>
+            </div>
+    </div>
+        </div>
+        
+            <div class="column">
+                <div class="ui checkbox">
+                    <input name="example" type="checkbox">
+                    <label>مدیر </label>
+                  </div>
+                  <br>
+                  <br>
+                  <div id="dropdownkendo" >            
+                      <div>
+                          <div class="k-rtl">
+                              <label id="drplabel">مدرسه <input id="drpkendo3" style="width:60%; margin-right:2%"/></label>
+                          </div>
+                      </div>
+              </div>
+
+
+
+
+        </div>
+        <div class="column">
+          
+                <div class="ui checkbox">
+                    <input name="example" type="checkbox">
+                    <label>راننده </label>
+                  </div>
+                  <br>
+                  <br>
+
+                  <div id="dropdownkendo">            
+                     
+                          <div class="k-rtl">
+                              <label id="drplabel">خودرو <input id="drpkendo4" style="width:60%; margin-right:2.6%"/></label>
+                          </div>
+                      
+              </div>
+              <br>
+        
+
+              <div id="multiselect">
+
+                <div class="k-rtl">
+                    
+                    <label style="float:right; margin-right:5%">مدارس</label>
+                    <select style="float:right; margin-right:3%; width:58%;" id="select">
+                    </select>
+                </div>
+
+
+        </div>
+
+       
+      </div>
+
+</div>
+<br><br>
+<div class="extra content">
+<center><button class="ui violet button" style="font-family: firstfont; font-size:18px; width:40%; padding:1.2%" >ثبت </button></center>
+</div>
+<br>
+</div>
+
+
+<script>
+  $(document)
+    .ready(function() {
+  $('#drp1')
+  .dropdown()
+;
+
+$('#drp2')
+  .dropdown()
+;
+   
+
+$("#drpkendo1").kendoDropDownList({
+  dataSource: ["000", "111", "222"],
+  filter: "contains",
+  optionLabel:"انتخاب کنید"
+});
+
+                    
+ $("#drpkendo2").kendoDropDownList({
+  dataSource: ["000", "111", "222"],
+  filter: "contains",
+  optionLabel:"انتخاب کنید"
+});
+
+
+$("#drpkendo3").kendoDropDownList({
+  dataSource: ["000", "111", "222"],
+  filter: "contains",
+  optionLabel:"انتخاب کنید"
+});
+
+
+$("#drpkendo4").kendoDropDownList({
+  dataSource: ["000", "111", "222"],
+  filter: "contains",
+  optionLabel:"انتخاب کنید"
+});
+
+
+
+
+$("#select").kendoMultiSelect({
+
+                      dataSource: [
+    { name: "one" },
+    { name: "two" }
+  ],
+  dataTextField: "name",
+  dataValueField: "name",
+                        placeholder: "انتخاب کنید"
+                       
+                    });
+
+
+
+    });
+
+ 
+</script>
+
+
+
+</body>
+
+</html>

@@ -46,6 +46,23 @@ router.get("/semantic_rtl.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/semantic_rtl.html');
     res.sendFile(file);
 });
+router.get("/sample.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/sample.html');
+    res.sendFile(file);
+});
+router.get("/samplelogin.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/samplelogin.html');
+    res.sendFile(file);
+});
+router.get("/sampleadmin.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/sampleadmin.html');
+    res.sendFile(file);
+});
+router.get("/sampleadmin2.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/sampleadmin2.html');
+    res.sendFile(file);
+});
+
 router.get("/exam.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/exam.html');
     res.sendFile(file);
@@ -92,6 +109,10 @@ router.get("/kendonotification.html", (req, res) => {
 });
 router.get("/kendodatasource.html", (req, res) => {
     var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendodatasource.html');
+    res.sendFile(file);
+});
+router.get("/kendotest.html", (req, res) => {
+    var file = path.join(__dirname + '/../HtmlLearning/kendo-ui/kendotest.html');
     res.sendFile(file);
 });
 router.post("/test.html", (req, res) => {
